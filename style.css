@@ -178,6 +178,14 @@ body {
     margin-top: -6px;
 }
 
+/* ---------- LOGO IMAGE ---------- */
+.logo-img {
+    height: 50px;
+    width: auto;
+    border-radius: 8px;
+    display: block;
+}
+
 .nav-links {
     display: flex;
     gap: 2.2rem;
@@ -1287,6 +1295,10 @@ body {
         gap: 0.8rem;
     }
 
+    .logo-img {
+        height: 40px;
+    }
+
     .nav-links {
         flex-wrap: wrap;
         gap: 1.2rem;
@@ -1426,6 +1438,10 @@ body {
 
     .logo h1 {
         font-size: 1.6rem;
+    }
+
+    .logo-img {
+        height: 32px;
     }
 
     .nav-links {
