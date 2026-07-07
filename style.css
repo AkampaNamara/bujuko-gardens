@@ -1579,3 +1579,159 @@ body {
         font-size: 0.7rem;
     }
 }
+/* ============================================================
+   MENU IMAGE SLIDESHOW STYLES
+   ============================================================ */
+
+.menu-slide-img {
+    width: 100%;
+    height: auto;
+    max-height: 700px;
+    object-fit: contain;
+    border-radius: 16px;
+    display: block;
+    background: var(--warm-white);
+}
+
+.menu-carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    background: var(--off-white);
+    padding: 0.5rem;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-slide {
+    display: none;
+    width: 100%;
+    animation: fadeSlide 0.5s ease;
+}
+
+.menu-slide.active {
+    display: block;
+}
+
+@keyframes fadeSlide {
+    0% {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Carousel Navigation Buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--coffee-dark);
+    color: var(--off-white);
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(61, 43, 31, 0.2);
+}
+
+.carousel-btn:hover {
+    background: var(--coffee-medium);
+    transform: translateY(-50%) scale(1.05);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+/* Carousel Dots */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--coffee-cream);
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0;
+}
+
+.dot:hover {
+    background: var(--coffee-light);
+}
+
+.dot.active {
+    background: var(--coffee-dark);
+    transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .menu-slide-img {
+        max-height: 500px;
+    }
+
+    .carousel-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
+    }
+
+    .prev-btn {
+        left: 5px;
+    }
+
+    .next-btn {
+        right: 5px;
+    }
+
+    .menu-carousel {
+        min-height: 300px;
+        padding: 0.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-slide-img {
+        max-height: 380px;
+    }
+
+    .menu-carousel {
+        min-height: 250px;
+    }
+
+    .carousel-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 0.7rem;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+}
