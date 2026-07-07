@@ -124,6 +124,89 @@
         });
     });
 
+    // ============================================================
+    // MENU CAROUSEL / SLIDESHOW
+    // ============================================================
+    const slides = document.querySelectorAll('.menu-slide');
+    const dotsContainer = document.getElementById('carouselDots');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let currentSlide = 0;
+    let autoPlayInterval;
+
+    // Only run if there are slides on the page
+    if (slides.length > 0) {
+        // Create dots
+        if (dotsContainer) {
+            slides.forEach((_, index) => {
+                const dot = document.createElement('button');
+                dot.classList.add('dot');
+                if (index === 0) dot.classList.add('active');
+                dot.setAttribute('data-index', index);
+                dot.addEventListener('click', () => goToSlide(index));
+                dotsContainer.appendChild(dot);
+            });
+        }
+
+        function goToSlide(index) {
+            // Remove active class from all slides
+            slides.forEach(slide => slide.classList.remove('active'));
+            // Remove active class from all dots
+            document.querySelectorAll('.dot').forEach(dot => dot.classList.remove('active'));
+
+            // Add active class to current slide and dot
+            slides[index].classList.add('active');
+            const dots = document.querySelectorAll('.dot');
+            if (dots[index]) dots[index].classList.add('active');
+
+            currentSlide = index;
+            resetAutoPlay();
+        }
+
+        function nextSlide() {
+            const nextIndex = (currentSlide + 1) % slides.length;
+            goToSlide(nextIndex);
+        }
+
+        function prevSlide() {
+            const prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+            goToSlide(prevIndex);
+        }
+
+        function resetAutoPlay() {
+            if (autoPlayInterval) {
+                clearInterval(autoPlayInterval);
+            }
+            autoPlayInterval = setInterval(nextSlide, 8000); // Change slide every 8 seconds
+        }
+
+        // Event listeners for buttons
+        if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+        if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            // Only if carousel is visible on the page
+            const carousel = document.querySelector('.menu-carousel');
+            if (carousel) {
+                if (e.key === 'ArrowRight') nextSlide();
+                if (e.key === 'ArrowLeft') prevSlide();
+            }
+        });
+
+        // Pause autoplay on hover
+        const carousel = document.querySelector('.menu-carousel');
+        if (carousel) {
+            carousel.addEventListener('mouseenter', () => {
+                if (autoPlayInterval) clearInterval(autoPlayInterval);
+            });
+            carousel.addEventListener('mouseleave', resetAutoPlay);
+        }
+
+        // Start autoplay
+        resetAutoPlay();
+    }
+
     console.log('🌿 Bujuko Miracle Park & Gardens · 3-Page Website');
     console.log('📄 Pages: Home | About | Contact');
     console.log('📍 Mityana road, 1.5km · signpost on right, 200m from main road.');
