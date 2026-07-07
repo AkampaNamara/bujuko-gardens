@@ -301,10 +301,10 @@ body {
     font-size: 1.2rem;
 }
 
+/* ---------- HERO IMAGE WITH OVERLAY ---------- */
 .hero-image {
     flex: 1 1 380px;
     max-width: 580px;
-    background: var(--coffee-cream);
     border-radius: 60px 20px 60px 20px;
     padding: 0;
     box-shadow: 0 20px 30px -10px rgba(61, 43, 31, 0.2);
@@ -325,7 +325,19 @@ body {
     object-fit: cover;
     min-height: 280px;
     max-height: 380px;
-    border-radius: 60px 20px 60px 20px;
+    display: block;
+}
+
+/* Dark overlay to make text readable */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    pointer-events: none;
+    z-index: 1;
 }
 
 .hero-image .garden-label {
@@ -333,22 +345,24 @@ body {
     font-size: 1.4rem;
     font-weight: 300;
     letter-spacing: 2px;
-    color: var(--text-dark);
-    background: rgba(245, 240, 232, 0.85);
+    color: #FFFFFF;
+    background: rgba(0, 0, 0, 0.45);
     padding: 0.2rem 1.4rem;
     border-radius: 60px;
     backdrop-filter: blur(2px);
     bottom: 60px;
+    z-index: 2;
 }
 
 .hero-location {
     position: absolute;
     font-size: 0.75rem;
-    background: var(--coffee-foam);
+    color: #FFFFFF;
+    background: rgba(0, 0, 0, 0.5);
     padding: 0.2rem 1rem;
     border-radius: 40px;
     bottom: 18px;
-    color: var(--coffee-dark);
+    z-index: 2;
 }
 
 /* ---------- DIRECTION CARD ---------- */
@@ -1084,6 +1098,43 @@ body {
 }
 
 /* ============================================================
+   MAP LINK STYLES - CLICKABLE GOOGLE MAPS
+   ============================================================ */
+
+.map-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.map-link:hover {
+    transform: scale(1.01);
+}
+
+.map-link:hover .map-click-hint {
+    color: var(--coffee-dark);
+    background: var(--coffee-cream);
+}
+
+.map-click-hint {
+    display: inline-block;
+    margin-top: 0.8rem;
+    padding: 0.4rem 1.2rem;
+    background: var(--warm-white);
+    border-radius: 60px;
+    font-size: 0.85rem;
+    color: var(--coffee-light);
+    transition: 0.3s ease;
+    border: 1px solid var(--coffee-cream);
+}
+
+.map-click-hint i {
+    margin-right: 0.4rem;
+}
+
+/* ============================================================
    MENU IMAGE SLIDESHOW STYLES
    ============================================================ */
 
@@ -1212,43 +1263,6 @@ body {
 }
 
 /* ============================================================
-   MAP LINK STYLES - CLICKABLE GOOGLE MAPS
-   ============================================================ */
-
-.map-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    transition: 0.3s ease;
-    cursor: pointer;
-}
-
-.map-link:hover {
-    transform: scale(1.01);
-}
-
-.map-link:hover .map-click-hint {
-    color: var(--coffee-dark);
-    background: var(--coffee-cream);
-}
-
-.map-click-hint {
-    display: inline-block;
-    margin-top: 0.8rem;
-    padding: 0.4rem 1.2rem;
-    background: var(--warm-white);
-    border-radius: 60px;
-    font-size: 0.85rem;
-    color: var(--coffee-light);
-    transition: 0.3s ease;
-    border: 1px solid var(--coffee-cream);
-}
-
-.map-click-hint i {
-    margin-right: 0.4rem;
-}
-
-/* ============================================================
    RESPONSIVE STYLES
    ============================================================ */
 
@@ -1353,6 +1367,18 @@ body {
     .hero-img {
         min-height: 200px;
         max-height: 280px;
+    }
+
+    .hero-image .garden-label {
+        font-size: 1rem;
+        padding: 0.1rem 0.8rem;
+        bottom: 45px;
+    }
+
+    .hero-location {
+        font-size: 0.6rem;
+        padding: 0.1rem 0.6rem;
+        bottom: 12px;
     }
 
     .direction-card {
@@ -1469,18 +1495,6 @@ body {
         justify-content: center;
         font-size: 0.85rem;
     }
-
-    .hero-image .garden-label {
-        font-size: 1rem;
-        padding: 0.1rem 0.8rem;
-        bottom: 45px;
-    }
-
-    .hero-location {
-        font-size: 0.6rem;
-        padding: 0.1rem 0.6rem;
-        bottom: 12px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -1517,6 +1531,28 @@ body {
         font-size: 1.6rem;
     }
 
+    .hero-image {
+        min-height: 160px;
+        max-height: 220px;
+    }
+
+    .hero-img {
+        min-height: 160px;
+        max-height: 220px;
+    }
+
+    .hero-image .garden-label {
+        font-size: 0.8rem;
+        padding: 0.1rem 0.6rem;
+        bottom: 35px;
+    }
+
+    .hero-location {
+        font-size: 0.5rem;
+        padding: 0.1rem 0.5rem;
+        bottom: 10px;
+    }
+
     .section-title {
         font-size: 1.3rem;
     }
@@ -1539,18 +1575,6 @@ body {
         text-align: center;
         gap: 0.4rem;
         font-size: 0.8rem;
-    }
-
-    .hero-image .garden-label {
-        font-size: 0.8rem;
-        padding: 0.1rem 0.6rem;
-        bottom: 35px;
-    }
-
-    .hero-location {
-        font-size: 0.5rem;
-        padding: 0.1rem 0.5rem;
-        bottom: 10px;
     }
 
     .slogan-banner {
