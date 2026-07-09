@@ -26,8 +26,13 @@
             </div>
             <div class="nav-links">
                 <a href="index.html" class="active">Home</a>
+                <a href="menu.html">Menu</a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
+                <a href="cart.html" class="cart-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
             </div>
         </header>
 
@@ -90,6 +95,22 @@
             </div>
         </div>
 
+        <!-- ===== FEATURED MENU ITEMS ===== -->
+        <section class="featured-menu">
+            <h2 class="section-title">
+                <i class="fas fa-utensils"></i> Popular Menu Items
+            </h2>
+            <p class="menu-subtitle">Try our most loved dishes</p>
+            <div class="menu-grid" id="featuredMenu">
+                <!-- Items will be loaded by JavaScript -->
+            </div>
+            <div style="text-align: center; margin-top: 1.5rem;">
+                <a href="menu.html" class="btn-primary">
+                    <i class="fas fa-utensils"></i> View Full Menu
+                </a>
+            </div>
+        </section>
+
         <!-- ===== PHOTO GALLERY ===== -->
         <section class="gallery-section">
             <h2 class="section-title">
@@ -116,85 +137,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- ============================================================ -->
-        <!-- ===== MENU SLIDESHOW - IMAGE BASED ===== -->
-        <!-- ============================================================ -->
-        <section class="menu-section">
-            <h2 class="section-title">
-                <i class="fas fa-utensils"></i> Our Menu
-            </h2>
-            <p class="menu-subtitle">Swipe through our delicious offerings</p>
-
-            <div class="menu-carousel">
-
-                 <!-- Slide 1: Main Course - Beef Dishes -->
-                <div class="menu-slide">
-                    <img src="menu-beef-dishes.jpeg" alt="Beef Dishes Menu" class="menu-slide-img" />
-                </div>
-                
-
-                <!-- Slide 2: Main Course - Goat Dishes -->
-                <div class="menu-slide">
-                    <img src="menu-goat-dishes.jpeg" alt="Goat Dishes Menu" class="menu-slide-img" />
-                </div>
-
-               <!-- Slide 3: Fast Food -->
-                <div class="menu-slide active">
-                    <img src="menu-fast-food.jpeg" alt="Fast Food Menu" class="menu-slide-img" />
-                </div>
-
-                <!-- Slide 4: Main Course - Chicken Dishes -->
-                <div class="menu-slide">
-                    <img src="menu-chicken-dishes.jpeg" alt="Chicken Dishes Menu" class="menu-slide-img" />
-                </div>
-
-                <!-- Slide 5: Main Course - Fish Dishes -->
-                <div class="menu-slide">
-                    <img src="menu-fish-dishes.jpeg" alt="Fish Dishes Menu" class="menu-slide-img" />
-                </div>
-
-                <!-- Slide 6: Curry & Pork Dishes -->
-                <div class="menu-slide">
-                    <img src="menu-curry.jpeg" alt="Curry & Pork Menu" class="menu-slide-img" />
-                </div>
-
-                <!-- Slide 7: Pizza -->
-                <div class="menu-slide">
-                    <img src="menu-pizza.jpeg" alt="Pizza Menu" class="menu-slide-img" />
-                </div>
-
-                <!-- Slide 8: Beverages - Tea & Coffee -->
-                <div class="menu-slide">
-                    <img src="menu-beverages.jpeg" alt="Beverages Menu" class="menu-slide-img" />
-                </div>
-
-                <!-- Slide 9: Starters & Omelettes -->
-                <div class="menu-slide">
-                    <img src="menu-starters.jpeg" alt="Starters & Omelettes Menu" class="menu-slide-img" />
-                </div>
-
-                <!-- Slide 10: Main Course - Full Menu -->
-                <div class="menu-slide">
-                    <img src="menu-main-course.jpeg" alt="Full Main Course Menu" class="menu-slide-img" />
-                </div>
-
-                <!-- Carousel Navigation -->
-                <button class="carousel-btn prev-btn" id="prevBtn">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="carousel-btn next-btn" id="nextBtn">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-            </div>
-
-            <!-- Carousel Dots -->
-            <div class="carousel-dots" id="carouselDots"></div>
-        </section>
-
-        <!-- ============================================================ -->
-        <!-- ===== END OF MENU SLIDESHOW ===== -->
-        <!-- ============================================================ -->
 
         <!-- ===== FEATURES / HIGHLIGHTS ===== -->
         <div class="features">
@@ -280,6 +222,12 @@
         <span class="close-lightbox" id="closeLightbox">&times;</span>
         <img class="lightbox-content" id="lightboxImage" />
         <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+
+    <!-- Cart Toast Notification -->
+    <div id="cartToast" class="cart-toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">Added to cart!</span>
     </div>
 
     <!-- External JavaScript -->
