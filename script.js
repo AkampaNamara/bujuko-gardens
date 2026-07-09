@@ -12,7 +12,7 @@
             '🚗 Mityana road · 1.5 km from main road',
             '👉 turn right at the signpost · 200m to paradise',
             '🌳 Relax, Celebrate and Create Memories',
-            '📞 Book now: 0757576806 / 0782230255',
+            '📞 Book now: +256757576806 / +256782230255',
         ];
         let index = 0;
         setInterval(() => {
@@ -448,7 +448,7 @@
         message += `%0A*Total: UGX ${getTotal().toLocaleString()}*%0A%0A`;
         message += 'Thank you for ordering from Bujuko Miracle Park & Gardens! 🌿';
         
-        const phone = '256751559413';
+        const phone = '256757576806';
         const url = `https://wa.me/${phone}?text=${message}`;
         
         // Clear cart after placing order
@@ -473,7 +473,7 @@
         body += `\nTotal: UGX ${getTotal().toLocaleString()}\n\n`;
         body += 'Thank you for ordering from Bujuko Miracle Park & Gardens! 🌿';
         
-        const email = 'akampanamara3@gmail.com';
+        const email = 'miracleparkhotel@gmail.com';
         const url = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         
         // Clear cart after placing order
@@ -566,6 +566,6 @@
     console.log('🌿 Bujuko Miracle Park & Gardens · Complete Website');
     console.log('📄 Pages: Home | Menu | About | Contact | Cart');
     console.log('📍 Mityana road, 1.5km · signpost on right, 200m from main road.');
-    console.log('📞 Bookings: 0757576806 / 0782230255');
+    console.log('📞 Bookings: +256757576806 / +256782230255');
     console.log('✨ Relax, Celebrate and Create Memories');
 })();
