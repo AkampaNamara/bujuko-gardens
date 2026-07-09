@@ -1,2102 +1,571 @@
-/* ============================================================
-   BUJUKO MIRACLE PARK & GARDENS - COFFEE BROWN & OFF-WHITE THEME
-   Pages: Home | About | Contact
-   ============================================================ */
-
-/* ---------- COLOR VARIABLES ---------- */
-:root {
-    --coffee-dark: #3D2B1F;
-    --coffee-medium: #5C3D2E;
-    --coffee-light: #7A5C44;
-    --coffee-cream: #D4C5A9;
-    --off-white: #F5F0E8;
-    --warm-white: #FAF6F0;
-    --cream: #E8DDD0;
-    --coffee-gold: #B8956A;
-    --coffee-foam: #E8DDD0;
-    --text-dark: #2D1F14;
-    --text-light: #F5F0E8;
-}
-
-/* ---------- RESET & BASE ---------- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
-}
-
-body {
-    background: var(--off-white);
-    color: var(--text-dark);
-    line-height: 1.6;
-}
-
-.container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 1.8rem;
-}
-
-/* ---------- SLOGAN BANNER ---------- */
-.slogan-banner {
-    background: var(--coffee-dark);
-    color: var(--off-white);
-    text-align: center;
-    padding: 0.6rem 1.2rem;
-    border-radius: 60px;
-    margin: 1rem 0 0.5rem;
-    font-size: 1.1rem;
-    font-weight: 400;
-    letter-spacing: 1px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.8rem;
-    flex-wrap: wrap;
-    box-shadow: 0 4px 15px rgba(61, 43, 31, 0.15);
-}
-
-.slogan-banner i {
-    color: var(--coffee-gold);
-    font-size: 1rem;
-}
-
-.slogan-banner span {
-    font-style: italic;
-}
-
-/* ---------- BOOKING BANNER ---------- */
-.booking-banner {
-    background: var(--coffee-cream);
-    color: var(--coffee-dark);
-    text-align: center;
-    padding: 0.6rem 1.2rem;
-    border-radius: 60px;
-    margin: 1.2rem 0;
-    font-size: 1rem;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.8rem;
-    flex-wrap: wrap;
-    border: 2px solid var(--coffee-gold);
-}
-
-.booking-banner i {
-    color: var(--coffee-dark);
-    font-size: 1.1rem;
-}
-
-.booking-banner strong {
-    color: var(--coffee-dark);
-}
-
-/* ---------- QUICK BOOKING (Contact Page) ---------- */
-.quick-booking {
-    background: var(--warm-white);
-    padding: 1.2rem;
-    border-radius: 28px;
-    margin: 1.2rem 0;
-    border: 2px solid var(--coffee-cream);
-    text-align: center;
-}
-
-.quick-booking h3 {
-    color: var(--coffee-dark);
-    margin-bottom: 0.4rem;
-    font-size: 1.2rem;
-}
-
-.quick-booking h3 i {
-    color: var(--coffee-dark);
-    margin-right: 0.5rem;
-}
-
-.quick-booking p {
-    color: var(--coffee-light);
-    margin-bottom: 0.8rem;
-}
-
-.booking-buttons {
-    display: flex;
-    gap: 0.8rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.booking-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: var(--coffee-dark);
-    color: var(--off-white);
-    padding: 0.5rem 1.2rem;
-    border-radius: 60px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
-    font-size: 0.9rem;
-}
-
-.booking-btn:hover {
-    background: var(--coffee-medium);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(61, 43, 31, 0.2);
-}
-
-.booking-btn i {
-    color: var(--coffee-gold);
-}
-
-/* ---------- HEADER / NAV ---------- */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.6rem 0 0.4rem;
-    flex-wrap: wrap;
-    border-bottom: 3px solid var(--coffee-cream);
-}
-
-.logo a {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-}
-
-.logo h1 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--coffee-dark);
-    letter-spacing: -0.5px;
-}
-
-.logo span {
-    font-weight: 300;
-    color: var(--coffee-light);
-    font-size: 0.75rem;
-    display: block;
-    margin-top: -4px;
-}
-
-/* ---------- LOGO IMAGE ---------- */
-.logo-img {
-    height: 42px;
-    width: auto;
-    border-radius: 6px;
-    display: block;
-}
-
-.nav-links {
-    display: flex;
-    gap: 1.8rem;
-    font-weight: 500;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--coffee-medium);
-    font-size: 1rem;
-    transition: 0.2s;
-    border-bottom: 2px solid transparent;
-    padding-bottom: 4px;
-}
-
-.nav-links a:hover {
-    border-bottom-color: var(--coffee-gold);
-    color: var(--coffee-dark);
-}
-
-.nav-links a.active {
-    border-bottom-color: var(--coffee-dark);
-    color: var(--coffee-dark);
-    font-weight: 600;
-}
-
-/* ---------- CART LINK IN NAV ---------- */
-.cart-link {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.3rem;
-}
-
-.cart-count {
-    background: var(--coffee-gold);
-    color: var(--coffee-dark);
-    font-size: 0.7rem;
-    font-weight: 700;
-    padding: 0.1rem 0.5rem;
-    border-radius: 50%;
-    min-width: 20px;
-    text-align: center;
-    line-height: 1.4;
-}
-
-/* ---------- CART TOAST NOTIFICATION ---------- */
-.cart-toast {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: var(--coffee-dark);
-    color: var(--off-white);
-    padding: 0.8rem 1.5rem;
-    border-radius: 60px;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-    transform: translateY(100px);
-    opacity: 0;
-    transition: all 0.4s ease;
-    z-index: 999;
-    font-size: 0.95rem;
-}
-
-.cart-toast.show {
-    transform: translateY(0);
-    opacity: 1;
-}
-
-.cart-toast i {
-    color: #4CAF50;
-    font-size: 1.2rem;
-}
-
-/* ---------- BUTTONS ---------- */
-.btn-primary {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.7rem;
-    background: var(--coffee-dark);
-    color: var(--off-white);
-    padding: 0.7rem 1.8rem;
-    border-radius: 60px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    margin-top: 1rem;
-}
-
-.btn-primary:hover {
-    background: var(--coffee-medium);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(61, 43, 31, 0.3);
-}
-
-/* ---------- HERO ---------- */
-.hero {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    margin: 2.2rem 0 2rem;
-    gap: 2rem;
-}
-
-.hero-text {
-    flex: 1 1 380px;
-}
-
-.hero-text h2 {
-    font-size: 2.5rem;
-    font-weight: 600;
-    color: var(--coffee-dark);
-    line-height: 1.2;
-}
-
-.highlight-town {
-    background: var(--coffee-cream);
-    padding: 0 0.3rem;
-    border-radius: 4px;
-}
-
-.hero-text .highlight {
-    background: var(--coffee-cream);
-    padding: 0.1rem 0.6rem;
-    display: inline-block;
-    border-radius: 30px;
-    font-weight: 300;
-    font-size: 1rem;
-    margin-top: 0.4rem;
-}
-
-.hero-text p {
-    font-size: 1.1rem;
-    margin: 1rem 0 0.6rem;
-    color: var(--coffee-light);
-}
-
-.signpost-badge {
-    background: var(--warm-white);
-    padding: 0.6rem 1.5rem;
-    border-radius: 60px;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.7rem;
-    font-weight: 500;
-    border-left: 6px solid var(--coffee-dark);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
-    margin-top: 0.5rem;
-}
-
-.signpost-badge i {
-    color: var(--coffee-dark);
-    font-size: 1.2rem;
-}
-
-/* ---------- HERO IMAGE WITH OVERLAY ---------- */
-.hero-image {
-    flex: 1 1 380px;
-    max-width: 580px;
-    border-radius: 60px 20px 60px 20px;
-    padding: 0;
-    box-shadow: 0 20px 30px -10px rgba(61, 43, 31, 0.2);
-    text-align: center;
-    min-height: 280px;
-    max-height: 380px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
-}
-
-.hero-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    min-height: 280px;
-    max-height: 380px;
-    display: block;
-}
-
-/* Dark overlay to make text readable */
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.35);
-    pointer-events: none;
-    z-index: 1;
-}
-
-.hero-image .garden-label {
-    position: absolute;
-    font-size: 1.4rem;
-    font-weight: 300;
-    letter-spacing: 2px;
-    color: #FFFFFF;
-    background: rgba(0, 0, 0, 0.45);
-    padding: 0.2rem 1.4rem;
-    border-radius: 60px;
-    backdrop-filter: blur(2px);
-    bottom: 60px;
-    z-index: 2;
-}
-
-.hero-location {
-    position: absolute;
-    font-size: 0.75rem;
-    color: #FFFFFF;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 0.2rem 1rem;
-    border-radius: 40px;
-    bottom: 18px;
-    z-index: 2;
-}
-
-/* ---------- DIRECTION CARD ---------- */
-.direction-card {
-    border-radius: 40px;
-    padding: 1.2rem 1.8rem;
-    margin: 1.5rem 0 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    background: var(--warm-white);
-    border: 1px solid var(--coffee-cream);
-    box-shadow: 0 8px 18px rgba(61, 43, 31, 0.06);
-}
-
-.direction-item {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    font-size: 1rem;
-    padding: 0.3rem 0.2rem;
-}
-
-.direction-item i {
-    color: var(--coffee-dark);
-    width: 1.8rem;
-    font-size: 1.3rem;
-    text-align: center;
-}
-
-.direction-item strong {
-    font-weight: 600;
-    color: var(--coffee-dark);
-}
-
-.direction-item .distance-badge {
-    background: var(--coffee-dark);
-    color: var(--off-white);
-    padding: 0.2rem 1rem;
-    border-radius: 60px;
-    font-size: 0.8rem;
-    margin-left: 0.4rem;
-    font-weight: 500;
-}
-
-/* ---------- GALLERY SECTION ---------- */
-.gallery-section {
-    margin: 2.5rem 0;
-}
-
-.section-title {
-    font-size: 2rem;
-    font-weight: 500;
-    color: var(--coffee-dark);
-    margin-bottom: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-}
-
-.section-title i {
-    color: var(--coffee-dark);
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 1.2rem;
-}
-
-.gallery-item {
-    border-radius: 24px;
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    background: var(--warm-white);
-    aspect-ratio: 4 / 3;
-    max-height: 220px;
-}
-
-.gallery-item:hover {
-    transform: scale(1.03);
-    box-shadow: 0 12px 30px rgba(61, 43, 31, 0.15);
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* ---------- FEATURES GRID ---------- */
-.features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.8rem;
-    margin: 2.5rem 0 3rem;
-}
-
-.feature-card {
-    background: var(--warm-white);
-    padding: 1.5rem 1.2rem;
-    border-radius: 36px;
-    box-shadow: 0 12px 22px -8px rgba(61, 43, 31, 0.06);
-    transition: all 0.15s;
-    border: 1px solid var(--coffee-cream);
-    text-align: center;
-}
-
-.feature-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--coffee-gold);
-    box-shadow: 0 20px 28px -12px var(--coffee-light);
-}
-
-.feature-card i {
-    font-size: 2.2rem;
-    color: var(--coffee-dark);
-    background: var(--coffee-cream);
-    padding: 0.6rem;
-    border-radius: 60px;
-    margin-bottom: 0.8rem;
-}
-
-.feature-card h3 {
-    font-size: 1.3rem;
-    font-weight: 500;
-    color: var(--coffee-dark);
-}
-
-.feature-card p {
-    color: var(--coffee-light);
-    margin-top: 0.4rem;
-    font-size: 0.95rem;
-}
-
-/* ---------- FEATURED MENU ---------- */
-.featured-menu {
-    margin: 2.5rem 0;
-}
-
-.menu-subtitle {
-    text-align: center;
-    color: var(--coffee-light);
-    font-size: 0.95rem;
-    margin-top: -0.5rem;
-    margin-bottom: 1.5rem;
-}
-
-/* ---------- MENU GRID ---------- */
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1.5rem;
-}
-
-.menu-card {
-    background: var(--warm-white);
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid var(--coffee-cream);
-    display: flex;
-    flex-direction: column;
-}
-
-.menu-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(61, 43, 31, 0.12);
-}
-
-.menu-card-image {
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-    background: var(--coffee-cream);
-}
-
-.menu-card-body {
-    padding: 0.8rem 1rem 1rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.menu-card-title {
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--coffee-dark);
-    margin-bottom: 0.2rem;
-}
-
-.menu-card-desc {
-    font-size: 0.75rem;
-    color: var(--coffee-light);
-    margin-bottom: 0.4rem;
-    flex: 1;
-    line-height: 1.3;
-}
-
-.menu-card-price {
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--coffee-dark);
-    margin-bottom: 0.6rem;
-}
-
-.menu-card .btn-add-cart {
-    background: var(--coffee-dark);
-    color: var(--off-white);
-    border: none;
-    padding: 0.4rem 0.8rem;
-    border-radius: 60px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: 0.3s;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.4rem;
-    width: 100%;
-}
-
-.menu-card .btn-add-cart:hover {
-    background: var(--coffee-medium);
-    transform: scale(1.02);
-}
-
-.menu-card .btn-add-cart:active {
-    transform: scale(0.95);
-}
-
-.menu-card .btn-add-cart i {
-    font-size: 0.8rem;
-}
-
-/* ---------- MENU TABS ---------- */
-.menu-tabs {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem;
-    margin: 1.5rem 0 2rem;
-    justify-content: center;
-}
-
-.tab-btn {
-    background: var(--warm-white);
-    color: var(--coffee-medium);
-    border: 2px solid var(--coffee-cream);
-    padding: 0.4rem 1rem;
-    border-radius: 60px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.tab-btn:hover {
-    border-color: var(--coffee-gold);
-    color: var(--coffee-dark);
-}
-
-.tab-btn.active {
-    background: var(--coffee-dark);
-    color: var(--off-white);
-    border-color: var(--coffee-dark);
-}
-
-/* ---------- CART PAGE ---------- */
-.cart-page {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 2rem;
-    margin: 2rem 0 3rem;
-}
-
-.cart-items-empty {
-    text-align: center;
-    padding: 3rem 1rem;
-    background: var(--warm-white);
-    border-radius: 30px;
-    border: 2px dashed var(--coffee-cream);
-}
-
-.cart-items-empty i {
-    font-size: 3rem;
-    color: var(--coffee-cream);
-    margin-bottom: 1rem;
-}
-
-.cart-items-empty h3 {
-    color: var(--coffee-light);
-    margin-bottom: 0.5rem;
-}
-
-.cart-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 0.8rem 0;
-    border-bottom: 1px solid var(--coffee-cream);
-}
-
-.cart-item:last-child {
-    border-bottom: none;
-}
-
-.cart-item-img {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 12px;
-    background: var(--coffee-cream);
-}
-
-.cart-item-info {
-    flex: 1;
-}
-
-.cart-item-info h4 {
-    font-size: 0.95rem;
-    color: var(--coffee-dark);
-}
-
-.cart-item-info p {
-    font-size: 0.85rem;
-    color: var(--coffee-light);
-}
-
-.cart-item-qty {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.cart-item-qty button {
-    background: var(--coffee-cream);
-    border: none;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: 0.3s;
-    color: var(--coffee-dark);
-    font-weight: 700;
-}
-
-.cart-item-qty button:hover {
-    background: var(--coffee-gold);
-}
-
-.cart-item-qty span {
-    font-weight: 600;
-    min-width: 24px;
-    text-align: center;
-    color: var(--coffee-dark);
-}
-
-.cart-item-remove {
-    background: none;
-    border: none;
-    color: #e74c3c;
-    cursor: pointer;
-    font-size: 1.1rem;
-    transition: 0.3s;
-    padding: 0.3rem;
-}
-
-.cart-item-remove:hover {
-    transform: scale(1.2);
-}
-
-/* ---------- CART SUMMARY ---------- */
-.cart-summary {
-    background: var(--warm-white);
-    padding: 1.5rem;
-    border-radius: 28px;
-    border: 1px solid var(--coffee-cream);
-    align-self: start;
-    position: sticky;
-    top: 20px;
-}
-
-.cart-summary h3 {
-    font-size: 1.3rem;
-    color: var(--coffee-dark);
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--coffee-cream);
-}
-
-.cart-summary-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem 0;
-    color: var(--coffee-light);
-    font-size: 0.95rem;
-}
-
-.cart-summary-row.total {
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: var(--coffee-dark);
-    border-top: 2px solid var(--coffee-cream);
-    padding-top: 0.8rem;
-    margin-top: 0.5rem;
-}
-
-.btn-place-order {
-    width: 100%;
-    background: var(--coffee-dark);
-    color: var(--off-white);
-    border: none;
-    padding: 0.8rem;
-    border-radius: 60px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-    margin-top: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.6rem;
-}
-
-.btn-place-order:hover {
-    background: var(--coffee-medium);
-    transform: scale(1.02);
-}
-
-.btn-place-order:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-    transform: none;
-}
-
-/* ---------- LOCATION SECTION ---------- */
-.location-section {
-    background: var(--coffee-cream);
-    border-radius: 50px;
-    padding: 1.5rem 2rem;
-    margin: 2rem 0 2.2rem;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1.2rem;
-}
-
-.location-text {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.location-text i {
-    font-size: 2.4rem;
-    color: var(--coffee-dark);
-}
-
-.location-text div {
-    font-size: 1.1rem;
-}
-
-.location-text .town {
-    font-weight: 600;
-    font-size: 1.4rem;
-    color: var(--coffee-dark);
-}
-
-.location-cta {
-    background: var(--coffee-dark);
-    color: var(--off-white);
-    padding: 0.5rem 1.8rem;
-    border-radius: 60px;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: 0.2s;
-    cursor: default;
-    border: none;
-    font-size: 0.95rem;
-}
-
-.location-cta i {
-    font-size: 1.1rem;
-}
-
-/* ---------- GREETING MESSAGE ---------- */
-.greeting-message {
-    text-align: center;
-    background: var(--warm-white);
-    border-radius: 60px;
-    padding: 0.6rem 1rem;
-    margin: 0.6rem 0 1rem;
-    border: 1px solid var(--coffee-cream);
-}
-
-.greeting-message i {
-    color: var(--coffee-dark);
-    margin-right: 10px;
-}
-
-/* ---------- LIGHTBOX ---------- */
-.lightbox {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(61, 43, 31, 0.92);
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.lightbox.show {
-    display: flex;
-}
-
-.lightbox-content {
-    max-width: 85%;
-    max-height: 85%;
-    object-fit: contain;
-    border-radius: 12px;
-}
-
-.close-lightbox {
-    position: absolute;
-    top: 30px;
-    right: 50px;
-    color: var(--off-white);
-    font-size: 3.5rem;
-    font-weight: 300;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.close-lightbox:hover {
-    color: var(--coffee-cream);
-}
-
-.lightbox-caption {
-    color: var(--off-white);
-    margin-top: 1.2rem;
-    font-size: 1.1rem;
-    background: rgba(61, 43, 31, 0.7);
-    padding: 0.5rem 2rem;
-    border-radius: 40px;
-}
-
-/* ---------- FOOTER ---------- */
-.footer {
-    border-top: 3px solid var(--coffee-cream);
-    padding: 1.5rem 0 1.2rem;
-    margin-top: 1.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--coffee-light);
-    font-size: 0.95rem;
-}
-
-.footer i {
-    margin: 0 0.2rem;
-    color: var(--coffee-dark);
-}
-
-.footer .credit {
-    font-size: 0.9rem;
-}
-
-.footer .fa-heart {
-    color: #8B5A2B;
-}
-
-/* ============================================================
-   ABOUT PAGE STYLES
-   ============================================================ */
-
-/* ---------- PAGE HERO ---------- */
-.page-hero {
-    text-align: center;
-    padding: 2rem 0 1.2rem;
-    border-bottom: 2px solid var(--coffee-cream);
-    margin-bottom: 2rem;
-}
-
-.page-hero h1 {
-    font-size: 2.5rem;
-    color: var(--coffee-dark);
-    font-weight: 600;
-}
-
-.page-hero h1 i {
-    color: var(--coffee-dark);
-    margin-right: 0.8rem;
-}
-
-.page-subtitle {
-    font-size: 1.1rem;
-    color: var(--coffee-light);
-    margin-top: 0.3rem;
-}
-
-/* ---------- ABOUT GRID ---------- */
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
-    margin: 1.5rem 0 2.5rem;
-    align-items: start;
-}
-
-.about-text h2 {
-    font-size: 1.8rem;
-    color: var(--coffee-dark);
-    margin-bottom: 1rem;
-}
-
-.about-text h2 i {
-    color: var(--coffee-dark);
-    margin-right: 0.6rem;
-}
-
-.about-text p {
-    font-size: 1rem;
-    color: var(--coffee-light);
-    margin-bottom: 1rem;
-    line-height: 1.8;
-}
-
-.about-stats {
-    display: flex;
-    gap: 1.5rem;
-    margin: 1.5rem 0;
-    flex-wrap: wrap;
-}
-
-.stat-item {
-    text-align: center;
-    background: var(--coffee-cream);
-    padding: 0.8rem 1.5rem;
-    border-radius: 20px;
-    flex: 1;
-    min-width: 80px;
-}
-
-.stat-number {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--coffee-dark);
-}
-
-.stat-label {
-    font-size: 0.8rem;
-    color: var(--coffee-light);
-}
-
-.about-image {
-    background: var(--coffee-cream);
-    border-radius: 40px;
-    overflow: hidden;
-    box-shadow: 0 12px 30px rgba(61, 43, 31, 0.08);
-    max-height: 360px;
-}
-
-.about-image img {
-    width: 100%;
-    height: 320px;
-    object-fit: cover;
-}
-
-.image-caption {
-    padding: 0.6rem;
-    text-align: center;
-    color: var(--coffee-light);
-    font-style: italic;
-    font-size: 0.9rem;
-}
-
-/* ---------- OFFER SECTION ---------- */
-.offer-section {
-    margin: 2.5rem 0;
-}
-
-.offer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 1.2rem;
-}
-
-.offer-card {
-    background: var(--warm-white);
-    padding: 1.5rem;
-    border-radius: 28px;
-    text-align: center;
-    border: 1px solid var(--coffee-cream);
-    transition: 0.3s;
-}
-
-.offer-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(61, 43, 31, 0.08);
-}
-
-.offer-card i {
-    font-size: 2.2rem;
-    color: var(--coffee-dark);
-    background: var(--coffee-cream);
-    padding: 0.6rem;
-    border-radius: 60px;
-    margin-bottom: 0.8rem;
-}
-
-.offer-card h3 {
-    font-size: 1.1rem;
-    color: var(--coffee-dark);
-    margin-bottom: 0.4rem;
-}
-
-.offer-card p {
-    color: var(--coffee-light);
-    font-size: 0.9rem;
-}
-
-/* ---------- TESTIMONIALS ---------- */
-.testimonials {
-    margin: 2.5rem 0;
-}
-
-.testimonial-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 1.5rem;
-}
-
-.testimonial-card {
-    background: var(--warm-white);
-    padding: 1.5rem;
-    border-radius: 28px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-    border: 1px solid var(--coffee-cream);
-}
-
-.testimonial-card .stars {
-    color: #B8956A;
-    margin-bottom: 0.6rem;
-}
-
-.testimonial-card p {
-    font-size: 0.95rem;
-    color: var(--coffee-light);
-    font-style: italic;
-    margin-bottom: 0.8rem;
-}
-
-.testimonial-author {
-    display: flex;
-    flex-direction: column;
-}
-
-.testimonial-author strong {
-    color: var(--coffee-dark);
-    font-size: 0.95rem;
-}
-
-.testimonial-author span {
-    font-size: 0.8rem;
-    color: var(--coffee-light);
-}
-
-/* ============================================================
-   CONTACT PAGE STYLES
-   ============================================================ */
-
-/* ---------- CONTACT GRID ---------- */
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 2.5rem;
-    margin: 1.5rem 0 2.5rem;
-}
-
-/* ---------- CONTACT FORM ---------- */
-.contact-form-wrapper h2 {
-    font-size: 1.6rem;
-    color: var(--coffee-dark);
-    margin-bottom: 1.2rem;
-}
-
-.contact-form-wrapper h2 i {
-    color: var(--coffee-dark);
-    margin-right: 0.6rem;
-}
-
-.contact-form .form-group {
-    margin-bottom: 1rem;
-}
-
-.contact-form label {
-    display: block;
-    font-weight: 500;
-    color: var(--coffee-dark);
-    margin-bottom: 0.3rem;
-    font-size: 0.95rem;
-}
-
-.contact-form label i {
-    color: var(--coffee-dark);
-    margin-right: 0.4rem;
-    width: 1.2rem;
-}
-
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-    width: 100%;
-    padding: 0.7rem 1rem;
-    border: 2px solid var(--coffee-cream);
-    border-radius: 16px;
-    font-size: 0.95rem;
-    background: var(--warm-white);
-    transition: 0.2s;
-    color: var(--text-dark);
-}
-
-.contact-form input:focus,
-.contact-form select:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: var(--coffee-dark);
-    box-shadow: 0 0 0 4px rgba(61, 43, 31, 0.1);
-}
-
-.contact-form textarea {
-    resize: vertical;
-}
-
-.form-status {
-    margin-top: 0.8rem;
-    padding: 0.6rem;
-    border-radius: 16px;
-    display: none;
-}
-
-.form-status.success {
-    display: block;
-    background: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
-}
-
-.form-status.error {
-    display: block;
-    background: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
-}
-
-/* ---------- CONTACT INFO ---------- */
-.contact-info h2 {
-    font-size: 1.6rem;
-    color: var(--coffee-dark);
-    margin-bottom: 1.2rem;
-}
-
-.contact-info h2 i {
-    color: var(--coffee-dark);
-    margin-right: 0.6rem;
-}
-
-.info-item {
-    display: flex;
-    gap: 0.8rem;
-    margin-bottom: 1.2rem;
-}
-
-.info-item i {
-    font-size: 1.2rem;
-    color: var(--coffee-dark);
-    width: 1.8rem;
-    padding-top: 0.2rem;
-}
-
-.info-item strong {
-    display: block;
-    color: var(--coffee-dark);
-    font-size: 0.95rem;
-}
-
-.info-item p {
-    color: var(--coffee-light);
-    margin: 0.2rem 0;
-    font-size: 0.95rem;
-}
-
-/* ---------- DIRECTIONS BOX ---------- */
-.directions-box {
-    background: var(--coffee-cream);
-    padding: 1.2rem;
-    border-radius: 28px;
-    margin: 1.2rem 0;
-}
-
-.directions-box h3 {
-    color: var(--coffee-dark);
-    margin-bottom: 0.8rem;
-    font-size: 1.1rem;
-}
-
-.directions-box h3 i {
-    color: var(--coffee-dark);
-    margin-right: 0.5rem;
-}
-
-.direction-step {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    margin-bottom: 0.6rem;
-}
-
-.step-number {
-    background: var(--coffee-dark);
-    color: var(--off-white);
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 600;
-    font-size: 0.8rem;
-    flex-shrink: 0;
-}
-
-.direction-step p {
-    color: var(--coffee-dark);
-    font-size: 0.95rem;
-}
-
-/* ---------- SOCIAL LINKS ---------- */
-.social-links h3 {
-    color: var(--coffee-dark);
-    margin-bottom: 0.8rem;
-    font-size: 1.1rem;
-}
-
-.social-links h3 i {
-    color: var(--coffee-dark);
-    margin-right: 0.5rem;
-}
-
-.social-icons {
-    display: flex;
-    gap: 0.8rem;
-}
-
-.social-icons a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 42px;
-    height: 42px;
-    background: var(--coffee-cream);
-    border-radius: 50%;
-    color: var(--coffee-dark);
-    font-size: 1.1rem;
-    transition: 0.3s;
-    text-decoration: none;
-}
-
-.social-icons a:hover {
-    background: var(--coffee-dark);
-    color: var(--off-white);
-    transform: translateY(-3px);
-}
-
-/* ---------- MAP SECTION ---------- */
-.map-section {
-    margin: 2.5rem 0;
-}
-
-.map-placeholder {
-    background: var(--coffee-cream);
-    border-radius: 40px;
-    padding: 2.5rem 1.8rem;
-    text-align: center;
-    border: 2px dashed var(--coffee-gold);
-}
-
-.map-placeholder i {
-    font-size: 3.5rem;
-    color: var(--coffee-dark);
-    margin-bottom: 0.8rem;
-}
-
-.map-placeholder p {
-    font-size: 1rem;
-    color: var(--coffee-dark);
-}
-
-.map-placeholder .map-directions {
-    color: var(--coffee-light);
-    font-size: 0.9rem;
-    margin-top: 0.3rem;
-}
-
-.map-badge {
-    display: inline-block;
-    background: var(--coffee-dark);
-    color: var(--off-white);
-    padding: 0.3rem 1.5rem;
-    border-radius: 60px;
-    margin-top: 0.8rem;
-    font-weight: 500;
-    font-size: 0.9rem;
-}
-
-.map-badge i {
-    font-size: 0.9rem;
-    margin-right: 0.4rem;
-}
-
-/* ---------- MAP LINK STYLES ---------- */
-.map-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    transition: 0.3s ease;
-    cursor: pointer;
-}
-
-.map-link:hover {
-    transform: scale(1.01);
-}
-
-.map-link:hover .map-click-hint {
-    color: var(--coffee-dark);
-    background: var(--coffee-cream);
-}
-
-.map-click-hint {
-    display: inline-block;
-    margin-top: 0.8rem;
-    padding: 0.4rem 1.2rem;
-    background: var(--warm-white);
-    border-radius: 60px;
-    font-size: 0.85rem;
-    color: var(--coffee-light);
-    transition: 0.3s ease;
-    border: 1px solid var(--coffee-cream);
-}
-
-.map-click-hint i {
-    margin-right: 0.4rem;
-}
-
-/* ============================================================
-   MENU IMAGE SLIDESHOW STYLES
-   ============================================================ */
-
-.menu-section {
-    margin: 2rem 0 1.5rem;
-    padding: 1.2rem 0.8rem;
-    background: var(--warm-white);
-    border-radius: 30px;
-    border: 1px solid var(--coffee-cream);
-}
-
-.menu-carousel {
-    position: relative;
-    overflow: hidden;
-    border-radius: 16px;
-    background: var(--off-white);
-    padding: 0.3rem;
-    min-height: 180px;
-    max-width: 650px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.menu-slide {
-    display: none;
-    width: 100%;
-    animation: fadeSlide 0.5s ease;
-}
-
-.menu-slide.active {
-    display: block;
-}
-
-.menu-slide-img {
-    width: 100%;
-    height: auto;
-    max-height: 340px;
-    object-fit: contain;
-    border-radius: 12px;
-    display: block;
-    background: var(--warm-white);
-}
-
-@keyframes fadeSlide {
-    0% {
-        opacity: 0;
-        transform: scale(0.98);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-/* Carousel Navigation Buttons */
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: var(--coffee-dark);
-    color: var(--off-white);
-    border: none;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    font-size: 0.7rem;
-    cursor: pointer;
-    transition: 0.3s;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 12px rgba(61, 43, 31, 0.2);
-}
-
-.carousel-btn:hover {
-    background: var(--coffee-medium);
-    transform: translateY(-50%) scale(1.05);
-}
-
-.prev-btn {
-    left: 6px;
-}
-
-.next-btn {
-    right: 6px;
-}
-
-/* Carousel Dots */
-.carousel-dots {
-    display: flex;
-    justify-content: center;
-    gap: 0.4rem;
-    margin-top: 0.6rem;
-    flex-wrap: wrap;
-}
-
-.dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--coffee-cream);
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-    padding: 0;
-}
-
-.dot:hover {
-    background: var(--coffee-light);
-}
-
-.dot.active {
-    background: var(--coffee-dark);
-    transform: scale(1.2);
-}
-
-/* ============================================================
-   RESPONSIVE STYLES
-   ============================================================ */
-
-@media (max-width: 900px) {
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .about-image img {
-        height: 250px;
-    }
-
-    .page-hero h1 {
-        font-size: 2.2rem;
-    }
-
-    .slogan-banner {
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .menu-grid {
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-        gap: 1rem;
-    }
-
-    .menu-card-image {
-        height: 110px;
-    }
-
-    .menu-card-body {
-        padding: 0.6rem 0.8rem 0.8rem;
-    }
-
-    .menu-card-title {
-        font-size: 0.85rem;
-    }
-
-    .menu-card-price {
-        font-size: 0.9rem;
-    }
-
-    .menu-card .btn-add-cart {
-        font-size: 0.75rem;
-        padding: 0.4rem 0.6rem;
-    }
-
-    .menu-carousel {
-        min-height: 150px;
-        max-width: 100%;
-        padding: 0.2rem;
-    }
-
-    .menu-slide-img {
-        max-height: 250px;
-    }
-
-    .carousel-btn {
-        width: 26px;
-        height: 26px;
-        font-size: 0.6rem;
-    }
-
-    .menu-section {
-        padding: 0.8rem 0.5rem;
-        border-radius: 20px;
-    }
-
-    .menu-subtitle {
-        font-size: 0.8rem;
-        margin-bottom: 0.6rem;
-    }
-
-    .section-title {
-        font-size: 1.6rem;
-    }
-
-    .cart-page {
-        grid-template-columns: 1fr;
-    }
-
-    .cart-summary {
-        position: static;
-    }
-
-    .menu-tabs {
-        gap: 0.4rem;
-    }
-
-    .tab-btn {
-        font-size: 0.75rem;
-        padding: 0.3rem 0.8rem;
-    }
-}
-
-@media (max-width: 650px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.4rem;
-        padding: 0.5rem 0 0.3rem;
-    }
-
-    .logo a {
-        gap: 0.6rem;
-    }
-
-    .logo h1 {
-        font-size: 1.2rem;
-    }
-
-    .logo span {
-        font-size: 0.65rem;
-        margin-top: -3px;
-    }
-
-    .logo-img {
-        height: 34px;
-    }
-
-    .nav-links {
-        flex-wrap: wrap;
-        gap: 0.8rem;
-    }
-
-    .nav-links a {
-        font-size: 0.9rem;
-    }
-
-    .hero-text h2 {
-        font-size: 2rem;
-    }
-
-    .hero-image {
-        min-height: 200px;
-        max-height: 280px;
-    }
-
-    .hero-img {
-        min-height: 200px;
-        max-height: 280px;
-    }
-
-    .hero-image .garden-label {
-        font-size: 1rem;
-        padding: 0.1rem 0.8rem;
-        bottom: 45px;
-    }
-
-    .hero-location {
-        font-size: 0.6rem;
-        padding: 0.1rem 0.6rem;
-        bottom: 12px;
-    }
-
-    .direction-card {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.6rem;
-        padding: 1rem 1.2rem;
-    }
-
-    .location-section {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1.2rem 1.5rem;
-    }
-
-    .gallery-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        gap: 0.6rem;
-    }
-
-    .gallery-item {
-        max-height: 160px;
-    }
-
-    .close-lightbox {
-        top: 20px;
-        right: 25px;
-        font-size: 2.5rem;
-    }
-
-    .lightbox-content {
-        max-width: 95%;
-        max-height: 80%;
-    }
-
-    .about-stats {
-        gap: 0.8rem;
-    }
-
-    .stat-item {
-        min-width: 60px;
-        padding: 0.6rem 1rem;
-    }
-
-    .stat-number {
-        font-size: 1.5rem;
-    }
-
-    .testimonial-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .offer-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-form-wrapper h2,
-    .contact-info h2 {
-        font-size: 1.3rem;
-    }
-
-    .info-item {
-        flex-direction: column;
-        gap: 0.2rem;
-    }
-
-    .info-item i {
-        width: auto;
-    }
-
-    .social-icons {
-        justify-content: center;
-    }
-
-    .map-placeholder {
-        padding: 1.5rem 1rem;
-    }
-
-    .page-hero h1 {
-        font-size: 1.6rem;
-    }
-
-    .page-subtitle {
-        font-size: 0.95rem;
-    }
-
-    .about-image img {
-        height: 200px;
-    }
-
-    .slogan-banner {
-        font-size: 0.85rem;
-        padding: 0.4rem 0.6rem;
-        gap: 0.4rem;
-        border-radius: 40px;
-    }
-
-    .slogan-banner i {
-        font-size: 0.7rem;
-    }
-
-    .booking-banner {
-        font-size: 0.85rem;
-        padding: 0.5rem 0.8rem;
-    }
-
-    .booking-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .booking-btn {
-        width: 100%;
-        justify-content: center;
-        font-size: 0.85rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 0 0.8rem;
-    }
-
-    .logo a {
-        gap: 0.4rem;
-    }
-
-    .logo h1 {
-        font-size: 1rem;
-    }
-
-    .logo span {
-        font-size: 0.55rem;
-        margin-top: -2px;
-    }
-
-    .logo-img {
-        height: 28px;
-    }
-
-    .nav-links {
-        gap: 0.6rem;
-    }
-
-    .nav-links a {
-        font-size: 0.8rem;
-    }
-
-    .hero-text h2 {
-        font-size: 1.6rem;
-    }
-
-    .hero-image {
-        min-height: 160px;
-        max-height: 220px;
-    }
-
-    .hero-img {
-        min-height: 160px;
-        max-height: 220px;
-    }
-
-    .hero-image .garden-label {
-        font-size: 0.8rem;
-        padding: 0.1rem 0.6rem;
-        bottom: 35px;
-    }
-
-    .hero-location {
-        font-size: 0.5rem;
-        padding: 0.1rem 0.5rem;
-        bottom: 10px;
-    }
-
-    .section-title {
-        font-size: 1.3rem;
-    }
-
-    .feature-card {
-        padding: 1rem;
-    }
-
-    .gallery-grid {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-        gap: 0.5rem;
-    }
-
-    .gallery-item {
-        max-height: 120px;
-    }
-
-    .footer {
-        flex-direction: column;
-        text-align: center;
-        gap: 0.4rem;
-        font-size: 0.8rem;
-    }
-
-    .slogan-banner {
-        font-size: 0.7rem;
-        padding: 0.3rem 0.5rem;
-        gap: 0.2rem;
-        border-radius: 30px;
-    }
-
-    .slogan-banner i {
-        font-size: 0.6rem;
-    }
-
-    .booking-banner {
-        font-size: 0.7rem;
-        padding: 0.4rem 0.6rem;
-        gap: 0.3rem;
-    }
-
-    .booking-banner i {
-        font-size: 0.7rem;
-    }
-
-    .menu-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 0.6rem;
-    }
-
-    .menu-card-image {
-        height: 90px;
-    }
-
-    .menu-card-body {
-        padding: 0.4rem 0.5rem 0.6rem;
-    }
-
-    .menu-card-title {
-        font-size: 0.75rem;
-    }
-
-    .menu-card-desc {
-        font-size: 0.65rem;
-        display: none;
-    }
-
-    .menu-card-price {
-        font-size: 0.8rem;
-        margin-bottom: 0.4rem;
-    }
-
-    .menu-card .btn-add-cart {
-        font-size: 0.65rem;
-        padding: 0.3rem 0.4rem;
-    }
-
-    .menu-card .btn-add-cart i {
-        font-size: 0.7rem;
-    }
-
-    .menu-carousel {
-        min-height: 120px;
-        padding: 0.15rem;
-    }
-
-    .menu-slide-img {
-        max-height: 200px;
-    }
-
-    .carousel-btn {
-        width: 22px;
-        height: 22px;
-        font-size: 0.5rem;
-    }
-
-    .prev-btn {
-        left: 4px;
-    }
-
-    .next-btn {
-        right: 4px;
-    }
-
-    .dot {
-        width: 6px;
-        height: 6px;
-    }
-
-    .menu-section {
-        padding: 0.5rem 0.3rem;
-        border-radius: 16px;
-        margin: 0.8rem 0;
-    }
-
-    .menu-subtitle {
-        font-size: 0.7rem;
-        margin-bottom: 0.4rem;
-    }
-
-    .location-text .town {
-        font-size: 1.1rem;
-    }
-
-    .location-text div {
-        font-size: 0.9rem;
-    }
-
-    .location-cta {
-        font-size: 0.8rem;
-        padding: 0.4rem 1.2rem;
-    }
-
-    .map-placeholder i {
-        font-size: 2.5rem;
-    }
-
-    .map-placeholder p {
-        font-size: 0.85rem;
-    }
-
-    .map-badge {
-        font-size: 0.75rem;
-        padding: 0.2rem 1rem;
-    }
-
-    .map-click-hint {
-        font-size: 0.7rem;
-        padding: 0.3rem 0.8rem;
-    }
-
-    .cart-item {
-        flex-wrap: wrap;
-        gap: 0.5rem;
-    }
-
-    .cart-item-img {
-        width: 50px;
-        height: 50px;
-    }
-}
+// ============================================================
+//  BUJUKO MIRACLE PARK & GARDENS - COMPLETE JAVASCRIPT
+//  Pages: Home | About | Contact | Menu | Cart
+// ============================================================
+
+(function () {
+    // ---- Dynamic greeting rotation ----
+    const msgEl = document.getElementById('dynamic-greeting');
+    if (msgEl) {
+        const messages = [
+            '📍 Bujuko Miracle Park · follow the signpost',
+            '🚗 Mityana road · 1.5 km from main road',
+            '👉 turn right at the signpost · 200m to paradise',
+            '🌳 Relax, Celebrate and Create Memories',
+            '📞 Book now: +256757576806 / +256782230255',
+        ];
+        let index = 0;
+        setInterval(() => {
+            index = (index + 1) % messages.length;
+            msgEl.textContent = messages[index];
+        }, 4500);
+    }
+
+    // ---- Lightbox functionality ----
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const closeLightbox = document.getElementById('closeLightbox');
+
+    const galleryImages = document.querySelectorAll('.gallery-item img');
+
+    galleryImages.forEach((img) => {
+        img.addEventListener('click', function () {
+            if (lightbox) {
+                lightbox.classList.add('show');
+                lightboxImage.src = this.src;
+                const captionText = this.alt || this.src.split('/').pop();
+                lightboxCaption.textContent = captionText;
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+
+    function closeLightboxFn() {
+        if (lightbox) {
+            lightbox.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+    }
+
+    if (closeLightbox) {
+        closeLightbox.addEventListener('click', closeLightboxFn);
+    }
+
+    if (lightbox) {
+        lightbox.addEventListener('click', function (e) {
+            if (e.target === this) {
+                closeLightboxFn();
+            }
+        });
+    }
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && lightbox && lightbox.classList.contains('show')) {
+            closeLightboxFn();
+        }
+    });
+
+    // ---- Contact Form Handler (UPDATED - Works with Formspree) ----
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+    const submitBtn = document.getElementById('submitBtn');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            if (!name || !email || !message) {
+                e.preventDefault();
+                formStatus.className = 'form-status error';
+                formStatus.textContent = '⚠️ Please fill in all required fields.';
+                return;
+            }
+            
+            if (!email.includes('@') || !email.includes('.')) {
+                e.preventDefault();
+                formStatus.className = 'form-status error';
+                formStatus.textContent = '⚠️ Please enter a valid email address.';
+                return;
+            }
+            
+            formStatus.className = 'form-status sending';
+            formStatus.textContent = '⏳ Sending your message...';
+            
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            }
+        });
+    }
+
+    // ---- Highlight current page in nav ----
+    document.addEventListener('DOMContentLoaded', function () {
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('.nav-links a');
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === currentPath) {
+                link.classList.add('active');
+            }
+        });
+        updateCartCount();
+        renderFeaturedMenu();
+        renderFullMenu();
+        renderCartPage();
+        setupCategoryTabs();
+    });
+
+    // ============================================================
+    // MENU DATA
+    // ============================================================
+    const menuItems = [
+        // Goat Dishes
+        { id: 1, name: 'Pan Fried Goat', category: 'goat', price: 40000, image: 'menu-goat-dishes.jpeg', desc: 'Well tendered goat cubes with vegetables & salad' },
+        { id: 2, name: 'Honey/BBQ Sauce Goat', category: 'goat', price: 40000, image: 'menu-goat-dishes.jpeg', desc: 'Grilled goat cubes in sweet sauce with salad' },
+        { id: 3, name: 'Goat Ribs', category: 'goat', price: 40000, image: 'menu-goat-dishes.jpeg', desc: 'Seasoned ribs grilled to tender in sweet sauce' },
+        { id: 4, name: 'Whole Goat Rib Cages', category: 'goat', price: 0, image: 'menu-goat-dishes.jpeg', desc: '3.5kg goat ribs, marinated & grilled to tender' },
+        // Beef Dishes
+        { id: 5, name: 'Pan Fried Beef', category: 'beef', price: 35000, image: 'menu-beef-dishes.jpeg', desc: 'Tender beef cubes in mixed vegetable soup' },
+        { id: 6, name: 'Beef Skewers', category: 'beef', price: 30000, image: 'menu-beef-dishes.jpeg', desc: 'Beef cubes on stick with veggies' },
+        { id: 7, name: 'Grilled Beef Steak', category: 'beef', price: 40000, image: 'menu-beef-dishes.jpeg', desc: 'Well marinated beef steak grilled to perfection' },
+        { id: 8, name: 'Tender Liver', category: 'beef', price: 40000, image: 'menu-beef-dishes.jpeg', desc: 'Well seasoned liver cubes with fresh vegetables' },
+        // Chicken Dishes
+        { id: 9, name: 'Grilled Whole Chicken', category: 'chicken', price: 100000, image: 'menu-chicken-dishes.jpeg', desc: 'Whole chicken grilled to perfection' },
+        { id: 10, name: 'Half Whole Chicken', category: 'chicken', price: 50000, image: 'menu-chicken-dishes.jpeg', desc: 'Half chicken grilled to perfection' },
+        { id: 11, name: 'Quarter Chicken', category: 'chicken', price: 30000, image: 'menu-chicken-dishes.jpeg', desc: 'Quarter chicken grilled or fried' },
+        { id: 12, name: 'Pan-fried Chicken', category: 'chicken', price: 30000, image: 'menu-chicken-dishes.jpeg', desc: 'Pan-fried chicken with vegetables' },
+        { id: 13, name: 'Chicken Nuggets', category: 'chicken', price: 30000, image: 'menu-chicken-dishes.jpeg', desc: 'Crispy chicken nuggets' },
+        { id: 14, name: 'Chicken Skewer', category: 'chicken', price: 30000, image: 'menu-chicken-dishes.jpeg', desc: 'Chicken cubes on stick with veggies' },
+        { id: 15, name: 'Chicken Fried Rice', category: 'chicken', price: 30000, image: 'menu-chicken-dishes.jpeg', desc: 'Chicken fried rice with vegetables' },
+        { id: 16, name: 'Chicken Filled Rice', category: 'chicken', price: 0, image: 'menu-chicken-dishes.jpeg', desc: 'Chicken filled rice with vegetables & gravy' },
+        // Fish Dishes
+        { id: 17, name: 'Fried Whole Fish', category: 'fish', price: 0, image: 'menu-fish-dishes.jpeg', desc: 'Whole fish marinated & deep-fried' },
+        { id: 18, name: 'Grilled Fish Fillet', category: 'fish', price: 0, image: 'menu-fish-dishes.jpeg', desc: 'Fish fillet grilled or deep-fried' },
+        { id: 19, name: 'Fish Fingers', category: 'fish', price: 0, image: 'menu-fish-dishes.jpeg', desc: 'Fish fillet strips, bread crumb fried' },
+        { id: 20, name: 'Special Kibecos', category: 'fish', price: 0, image: 'menu-fish-dishes.jpeg', desc: 'Whole fish tilapia with veggies & matooke' },
+        // Curry & Pork
+        { id: 21, name: 'Chicken Curry', category: 'curry', price: 35000, image: 'menu-curry.jpeg', desc: 'Chicken fillet cubes in blended curry sauce' },
+        { id: 22, name: 'Fish Curry', category: 'curry', price: 35000, image: 'menu-curry.jpeg', desc: 'Fish fillet cubes in tasty curry sauce' },
+        { id: 23, name: 'Vegetable Curry', category: 'curry', price: 30000, image: 'menu-curry.jpeg', desc: 'Mixture of steamed vegetables in curry sauce' },
+        { id: 24, name: 'Chicken Tikka Masala', category: 'curry', price: 40000, image: 'menu-curry.jpeg', desc: 'Chicken cubes in tikka masala sauce' },
+        { id: 25, name: 'Pan Fried Pork', category: 'curry', price: 50000, image: 'menu-curry.jpeg', desc: 'Pan fried pork chops' },
+        { id: 26, name: 'Pork Chops', category: 'curry', price: 50000, image: 'menu-curry.jpeg', desc: 'Grilled pork chops' },
+        { id: 27, name: 'Pork Ribs', category: 'curry', price: 50000, image: 'menu-curry.jpeg', desc: 'Seasoned pork ribs' },
+        // Fast Food
+        { id: 28, name: 'Chicken Burger', category: 'fastfood', price: 35000, image: 'menu-fast-food.jpeg', desc: 'Chicken burger with lettuce & sauce' },
+        { id: 29, name: 'Beef Burger', category: 'fastfood', price: 35000, image: 'menu-fast-food.jpeg', desc: 'Beef burger with lettuce & sauce' },
+        { id: 30, name: 'Chapati', category: 'fastfood', price: 3000, image: 'menu-fast-food.jpeg', desc: 'Plain chapati' },
+        { id: 31, name: 'Rolex', category: 'fastfood', price: 5000, image: 'menu-fast-food.jpeg', desc: 'Chapati with eggs and vegetables' },
+        { id: 32, name: 'Plain Chips', category: 'fastfood', price: 10000, image: 'menu-fast-food.jpeg', desc: 'Freshly fried chips' },
+        { id: 33, name: 'Chaps', category: 'fastfood', price: 8000, image: 'menu-fast-food.jpeg', desc: 'Chapatis with sauce' },
+        { id: 34, name: 'Kebabs', category: 'fastfood', price: 8000, image: 'menu-fast-food.jpeg', desc: 'Grilled beef kebabs' },
+        { id: 35, name: 'Beef Sausage (Pair)', category: 'fastfood', price: 8000, image: 'menu-fast-food.jpeg', desc: 'Pair of beef sausages' },
+        { id: 36, name: 'Beef Samosas (3)', category: 'fastfood', price: 8000, image: 'menu-fast-food.jpeg', desc: '3 beef samosas' },
+        { id: 37, name: 'Chicken Wing', category: 'fastfood', price: 20000, image: 'menu-fast-food.jpeg', desc: 'Grilled chicken wings' },
+        { id: 38, name: 'Chicken Chips', category: 'fastfood', price: 30000, image: 'menu-fast-food.jpeg', desc: 'Chicken with chips' },
+        // Pizza
+        { id: 39, name: 'Chicken Pizza (Large)', category: 'pizza', price: 40000, image: 'menu-pizza.jpeg', desc: 'Large chicken pizza' },
+        { id: 40, name: 'Chicken Pizza (Small)', category: 'pizza', price: 25000, image: 'menu-pizza.jpeg', desc: 'Small chicken pizza' },
+        { id: 41, name: 'Beef Pizza (Large)', category: 'pizza', price: 40000, image: 'menu-pizza.jpeg', desc: 'Large beef pizza' },
+        { id: 42, name: 'Beef Pizza (Small)', category: 'pizza', price: 25000, image: 'menu-pizza.jpeg', desc: 'Small beef pizza' },
+        { id: 43, name: 'Vegetable Pizza (Large)', category: 'pizza', price: 35000, image: 'menu-pizza.jpeg', desc: 'Large vegetable pizza' },
+        { id: 44, name: 'Vegetable Pizza (Small)', category: 'pizza', price: 25000, image: 'menu-pizza.jpeg', desc: 'Small vegetable pizza' },
+        { id: 45, name: 'Tomato & Cheese Pizza', category: 'pizza', price: 30000, image: 'menu-pizza.jpeg', desc: 'Tomato & cheese pizza' },
+        // Beverages - Tea & Coffee
+        { id: 46, name: 'African Tea', category: 'beverages', price: 10000, image: 'menu-beverages.jpeg', desc: 'Traditional African tea' },
+        { id: 47, name: 'Black Tea', category: 'beverages', price: 5000, image: 'menu-beverages.jpeg', desc: 'Plain black tea' },
+        { id: 48, name: 'Dawa Tea', category: 'beverages', price: 10000, image: 'menu-beverages.jpeg', desc: 'Spiced dawa tea' },
+        { id: 49, name: 'English Tea', category: 'beverages', price: 12000, image: 'menu-beverages.jpeg', desc: 'English breakfast tea' },
+        { id: 50, name: 'Plain Water', category: 'beverages', price: 5000, image: 'menu-beverages.jpeg', desc: 'Mineral water' },
+        { id: 51, name: 'African Coffee', category: 'beverages', price: 10000, image: 'menu-beverages.jpeg', desc: 'Traditional African coffee' },
+        { id: 52, name: 'Black Coffee', category: 'beverages', price: 5000, image: 'menu-beverages.jpeg', desc: 'Plain black coffee' },
+        { id: 53, name: 'Cappuccino (Single)', category: 'beverages', price: 8000, image: 'menu-beverages.jpeg', desc: 'Single cappuccino' },
+        { id: 54, name: 'Cappuccino (Double)', category: 'beverages', price: 10000, image: 'menu-beverages.jpeg', desc: 'Double cappuccino' },
+        { id: 55, name: 'Cafe Latte', category: 'beverages', price: 10000, image: 'menu-beverages.jpeg', desc: 'Cafe latte' },
+        { id: 56, name: 'Espresso (Single)', category: 'beverages', price: 6000, image: 'menu-beverages.jpeg', desc: 'Single espresso' },
+        { id: 57, name: 'Espresso (Double)', category: 'beverages', price: 7000, image: 'menu-beverages.jpeg', desc: 'Double espresso' },
+        // Beverages - Soft Drinks & Juices
+        { id: 58, name: 'Soda', category: 'beverages', price: 3000, image: 'menu-beverages.jpeg', desc: 'Soft drink' },
+        { id: 59, name: 'Water', category: 'beverages', price: 2000, image: 'menu-beverages.jpeg', desc: 'Bottled water' },
+        { id: 60, name: 'Passion Fruit Juice', category: 'beverages', price: 10000, image: 'menu-beverages.jpeg', desc: 'Fresh passion fruit juice' },
+        { id: 61, name: 'Melon Juice', category: 'beverages', price: 10000, image: 'menu-beverages.jpeg', desc: 'Fresh melon juice' },
+        { id: 62, name: 'Pineapple Juice', category: 'beverages', price: 10000, image: 'menu-beverages.jpeg', desc: 'Fresh pineapple juice' },
+        { id: 63, name: 'Lemon Juice', category: 'beverages', price: 12000, image: 'menu-beverages.jpeg', desc: 'Fresh lemon juice' },
+        { id: 64, name: 'Mango Juice', category: 'beverages', price: 10000, image: 'menu-beverages.jpeg', desc: 'Fresh mango juice' },
+        { id: 65, name: 'Red Juice', category: 'beverages', price: 15000, image: 'menu-beverages.jpeg', desc: 'Special red juice' },
+        { id: 66, name: 'Avocado Juice', category: 'beverages', price: 10000, image: 'menu-beverages.jpeg', desc: 'Fresh avocado juice' },
+        { id: 67, name: 'Banana Juice', category: 'beverages', price: 10000, image: 'menu-beverages.jpeg', desc: 'Fresh banana juice' },
+        { id: 68, name: 'Cocktails', category: 'beverages', price: 10000, image: 'menu-beverages.jpeg', desc: 'Special cocktails' },
+        // Starters & Omelettes
+        { id: 69, name: 'Fresh Garden Salad', category: 'starters', price: 20000, image: 'menu-starters.jpeg', desc: 'Mix of seasonal vegetables' },
+        { id: 70, name: 'Chicken Caesar Salad', category: 'starters', price: 30000, image: 'menu-starters.jpeg', desc: 'Chicken breast cubes with Caesar dressing' },
+        { id: 71, name: 'Chicken & Fruit Salad', category: 'starters', price: 30000, image: 'menu-starters.jpeg', desc: 'Grilled chicken with fresh fruits' },
+        { id: 72, name: 'Spanish Omelette', category: 'starters', price: 8000, image: 'menu-starters.jpeg', desc: 'Spanish-style omelette' },
+        { id: 73, name: 'Scrambled Eggs', category: 'starters', price: 8000, image: 'menu-starters.jpeg', desc: 'Scrambled eggs' },
+        { id: 74, name: 'Plain Omelette', category: 'starters', price: 5000, image: 'menu-starters.jpeg', desc: 'Plain omelette' },
+        { id: 75, name: 'Boiled Eggs', category: 'starters', price: 5000, image: 'menu-starters.jpeg', desc: 'Boiled eggs' },
+        { id: 76, name: 'Fried Eggs', category: 'starters', price: 5000, image: 'menu-starters.jpeg', desc: 'Fried eggs' },
+    ];
+
+    // ============================================================
+    // CART FUNCTIONALITY
+    // ============================================================
+    let cart = [];
+
+    function getCart() {
+        try {
+            const stored = localStorage.getItem('bujukoCart');
+            return stored ? JSON.parse(stored) : [];
+        } catch {
+            return [];
+        }
+    }
+
+    function saveCart() {
+        localStorage.setItem('bujukoCart', JSON.stringify(cart));
+        updateCartCount();
+    }
+
+    function addToCart(itemId) {
+        cart = getCart();
+        const existing = cart.find(item => item.id === itemId);
+        if (existing) {
+            existing.quantity += 1;
+        } else {
+            const menuItem = menuItems.find(item => item.id === itemId);
+            if (menuItem) {
+                cart.push({ ...menuItem, quantity: 1 });
+            }
+        }
+        saveCart();
+        showToast(`${menuItems.find(i => i.id === itemId)?.name || 'Item'} added to cart!`);
+        updateCartCount();
+    }
+
+    function removeFromCart(itemId) {
+        cart = getCart();
+        cart = cart.filter(item => item.id !== itemId);
+        saveCart();
+        renderCartPage();
+        updateCartCount();
+    }
+
+    function updateQuantity(itemId, change) {
+        cart = getCart();
+        const item = cart.find(i => i.id === itemId);
+        if (item) {
+            item.quantity += change;
+            if (item.quantity <= 0) {
+                cart = cart.filter(i => i.id !== itemId);
+            }
+            saveCart();
+            renderCartPage();
+            updateCartCount();
+        }
+    }
+
+    function getTotal() {
+        cart = getCart();
+        return cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    }
+
+    function updateCartCount() {
+        cart = getCart();
+        const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+        document.querySelectorAll('.cart-count').forEach(el => {
+            el.textContent = count;
+        });
+    }
+
+    // ============================================================
+    // TOAST NOTIFICATION
+    // ============================================================
+    function showToast(message) {
+        const toast = document.getElementById('cartToast');
+        const msgEl = document.getElementById('toastMessage');
+        if (toast && msgEl) {
+            msgEl.textContent = message;
+            toast.classList.add('show');
+            clearTimeout(toast._timeout);
+            toast._timeout = setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2500);
+        }
+    }
+
+    // ============================================================
+    // RENDER FEATURED MENU (Homepage)
+    // ============================================================
+    function renderFeaturedMenu() {
+        const container = document.getElementById('featuredMenu');
+        if (!container) return;
+        
+        const featured = menuItems.filter(item => item.price > 0).slice(0, 8);
+        
+        container.innerHTML = featured.map(item => `
+            <div class="menu-card">
+                <img src="${item.image || 'menu-placeholder.jpg'}" alt="${item.name}" class="menu-card-image" onerror="this.src='garden1.jpeg'" />
+                <div class="menu-card-body">
+                    <h3 class="menu-card-title">${item.name}</h3>
+                    ${item.desc ? `<p class="menu-card-desc">${item.desc}</p>` : ''}
+                    <p class="menu-card-price">${item.price > 0 ? item.price.toLocaleString() + '/=' : 'Call for price'}</p>
+                    ${item.price > 0 ? `<button class="btn-add-cart" onclick="addToCart(${item.id})"><i class="fas fa-cart-plus"></i> Add to Cart</button>` : `<span style="font-size:0.8rem;color:var(--coffee-light);text-align:center;">Call for price</span>`}
+                </div>
+            </div>
+        `).join('');
+    }
+
+    // ============================================================
+    // RENDER FULL MENU (Menu Page)
+    // ============================================================
+    function renderFullMenu(category = 'all') {
+        const container = document.getElementById('fullMenu');
+        if (!container) return;
+        
+        let filtered = category === 'all' ? menuItems : menuItems.filter(item => item.category === category);
+        filtered = filtered.filter(item => item.price > 0);
+        
+        if (filtered.length === 0) {
+            container.innerHTML = `
+                <div style="text-align:center;padding:2rem;grid-column:1/-1;">
+                    <p style="color:var(--coffee-light);">No items found in this category.</p>
+                </div>
+            `;
+            return;
+        }
+        
+        container.innerHTML = filtered.map(item => `
+            <div class="menu-card">
+                <img src="${item.image || 'menu-placeholder.jpg'}" alt="${item.name}" class="menu-card-image" onerror="this.src='garden1.jpeg'" />
+                <div class="menu-card-body">
+                    <h3 class="menu-card-title">${item.name}</h3>
+                    ${item.desc ? `<p class="menu-card-desc">${item.desc}</p>` : ''}
+                    <p class="menu-card-price">${item.price.toLocaleString()}/=</p>
+                    <button class="btn-add-cart" onclick="addToCart(${item.id})">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    // ============================================================
+    // CATEGORY TABS
+    // ============================================================
+    function setupCategoryTabs() {
+        const tabs = document.querySelectorAll('.tab-btn');
+        if (!tabs.length) return;
+        
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                tabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                const category = this.dataset.category;
+                renderFullMenu(category);
+            });
+        });
+    }
+
+    // ============================================================
+    // RENDER CART PAGE
+    // ============================================================
+    function renderCartPage() {
+        const container = document.getElementById('cartItems');
+        const summary = document.getElementById('cartSummary');
+        if (!container || !summary) return;
+        
+        cart = getCart();
+        
+        if (cart.length === 0) {
+            container.innerHTML = `
+                <div class="cart-items-empty">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3>Your cart is empty</h3>
+                    <p style="color:var(--coffee-light);">Browse our menu and add some delicious items!</p>
+                    <a href="menu.html" class="btn-primary" style="display:inline-block;margin-top:1rem;">
+                        <i class="fas fa-utensils"></i> View Menu
+                    </a>
+                </div>
+            `;
+            summary.innerHTML = `
+                <h3>Order Summary</h3>
+                <div class="cart-summary-row">Total: UGX 0</div>
+                <button class="btn-place-order" disabled>Cart is empty</button>
+            `;
+            return;
+        }
+        
+        // Render cart items
+        container.innerHTML = cart.map(item => `
+            <div class="cart-item">
+                <img src="${item.image || 'garden1.jpeg'}" alt="${item.name}" class="cart-item-img" onerror="this.src='garden1.jpeg'" />
+                <div class="cart-item-info">
+                    <h4>${item.name}</h4>
+                    <p>${item.price.toLocaleString()}/= each</p>
+                </div>
+                <div class="cart-item-qty">
+                    <button onclick="updateQuantity(${item.id}, -1)">−</button>
+                    <span>${item.quantity}</span>
+                    <button onclick="updateQuantity(${item.id}, 1)">+</button>
+                </div>
+                <button class="cart-item-remove" onclick="removeFromCart(${item.id})" title="Remove item">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </div>
+        `).join('');
+        
+        // Render summary
+        const total = getTotal();
+        const itemCount = cart.reduce((s, i) => s + i.quantity, 0);
+        summary.innerHTML = `
+            <h3>Order Summary</h3>
+            <div class="cart-summary-row">Items: ${itemCount}</div>
+            <div class="cart-summary-row total">Total: UGX ${total.toLocaleString()}</div>
+            <button class="btn-place-order" onclick="placeOrder()">
+                <i class="fas fa-whatsapp"></i> Place Order via WhatsApp
+            </button>
+            <button class="btn-place-order" onclick="placeOrderEmail()" style="background:var(--coffee-gold);color:var(--coffee-dark);margin-top:0.5rem;">
+                <i class="fas fa-envelope"></i> Place Order via Email
+            </button>
+        `;
+    }
+
+    // ============================================================
+    // PLACE ORDER (WhatsApp & Email)
+    // ============================================================
+    function placeOrder() {
+        cart = getCart();
+        if (cart.length === 0) return;
+        
+        let message = '🍽️ *New Order from Bujuko Miracle Park!*%0A%0A';
+        message += '*Order Details:*%0A';
+        cart.forEach(item => {
+            message += `${item.name} x${item.quantity} = ${(item.price * item.quantity).toLocaleString()}/=%0A`;
+        });
+        message += `%0A*Total: UGX ${getTotal().toLocaleString()}*%0A%0A`;
+        message += 'Thank you for ordering from Bujuko Miracle Park & Gardens! 🌿';
+        
+        const phone = '256757576806';
+        const url = `https://wa.me/${phone}?text=${message}`;
+        
+        // Clear cart after placing order
+        cart = [];
+        saveCart();
+        renderCartPage();
+        updateCartCount();
+        
+        window.open(url, '_blank');
+    }
+
+    function placeOrderEmail() {
+        cart = getCart();
+        if (cart.length === 0) return;
+        
+        let subject = 'New Order from Bujuko Miracle Park';
+        let body = 'New Order from Bujuko Miracle Park & Gardens!\n\n';
+        body += 'Order Details:\n';
+        cart.forEach(item => {
+            body += `${item.name} x${item.quantity} = UGX ${(item.price * item.quantity).toLocaleString()}\n`;
+        });
+        body += `\nTotal: UGX ${getTotal().toLocaleString()}\n\n`;
+        body += 'Thank you for ordering from Bujuko Miracle Park & Gardens! 🌿';
+        
+        const email = 'miracleparkhotel@gmail.com';
+        const url = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        
+        // Clear cart after placing order
+        cart = [];
+        saveCart();
+        renderCartPage();
+        updateCartCount();
+        
+        window.open(url, '_blank');
+    }
+
+    // ============================================================
+    // MENU CAROUSEL / SLIDESHOW (AUTO-PLAY EVERY 5 SECONDS)
+    // ============================================================
+    const slides = document.querySelectorAll('.menu-slide');
+    const dotsContainer = document.getElementById('carouselDots');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let currentSlide = 0;
+    let autoPlayInterval;
+
+    if (slides.length > 0) {
+        if (dotsContainer) {
+            slides.forEach((_, index) => {
+                const dot = document.createElement('button');
+                dot.classList.add('dot');
+                if (index === 0) dot.classList.add('active');
+                dot.setAttribute('data-index', index);
+                dot.addEventListener('click', () => goToSlide(index));
+                dotsContainer.appendChild(dot);
+            });
+        }
+
+        function goToSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            document.querySelectorAll('.dot').forEach(dot => dot.classList.remove('active'));
+            slides[index].classList.add('active');
+            const dots = document.querySelectorAll('.dot');
+            if (dots[index]) dots[index].classList.add('active');
+            currentSlide = index;
+            resetAutoPlay();
+        }
+
+        function nextSlide() {
+            const nextIndex = (currentSlide + 1) % slides.length;
+            goToSlide(nextIndex);
+        }
+
+        function prevSlide() {
+            const prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+            goToSlide(prevIndex);
+        }
+
+        function resetAutoPlay() {
+            if (autoPlayInterval) {
+                clearInterval(autoPlayInterval);
+            }
+            autoPlayInterval = setInterval(nextSlide, 5000);
+        }
+
+        if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+        if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+
+        document.addEventListener('keydown', function(e) {
+            const carousel = document.querySelector('.menu-carousel');
+            if (carousel) {
+                if (e.key === 'ArrowRight') nextSlide();
+                if (e.key === 'ArrowLeft') prevSlide();
+            }
+        });
+
+        const carousel = document.querySelector('.menu-carousel');
+        if (carousel) {
+            carousel.addEventListener('mouseenter', () => {
+                if (autoPlayInterval) clearInterval(autoPlayInterval);
+            });
+            carousel.addEventListener('mouseleave', resetAutoPlay);
+        }
+
+        resetAutoPlay();
+    }
+
+    // Expose functions globally for onclick
+    window.addToCart = addToCart;
+    window.removeFromCart = removeFromCart;
+    window.updateQuantity = updateQuantity;
+    window.placeOrder = placeOrder;
+    window.placeOrderEmail = placeOrderEmail;
+
+    console.log('🌿 Bujuko Miracle Park & Gardens · Complete Website');
+    console.log('📄 Pages: Home | Menu | About | Contact | Cart');
+    console.log('📍 Mityana road, 1.5km · signpost on right, 200m from main road.');
+    console.log('📞 Bookings: +256757576806 / +256782230255');
+    console.log('✨ Relax, Celebrate and Create Memories');
+})();
