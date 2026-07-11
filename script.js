@@ -103,9 +103,9 @@
 
     // ---- Highlight current page in nav ----
     document.addEventListener('DOMContentLoaded', function () {
-        const currentPath = window.location.pathname.split('/').pop() || 'home.html';
-        const navLinks = document.querySelectorAll('.nav-links a');
-        navLinks.forEach(link => {
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+        const navItems = document.querySelectorAll('.vertical-nav .nav-item');
+        navItems.forEach(link => {
             const href = link.getAttribute('href');
             if (href === currentPath) {
                 link.classList.add('active');
