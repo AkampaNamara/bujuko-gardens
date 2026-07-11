@@ -12,7 +12,7 @@
             '🚗 Mityana road · 1.5 km from main road',
             '👉 turn right at the signpost · 200m to paradise',
             '🌳 Relax, Celebrate and Create Memories',
-            '📞 Book now: +256757576806 / +256782230255',
+            '📞 Book now: 0757576806 / 0782230255',
         ];
         let index = 0;
         setInterval(() => {
@@ -448,7 +448,7 @@
         message += `%0A*Total: UGX ${getTotal().toLocaleString()}*%0A%0A`;
         message += 'Thank you for ordering from Bujuko Miracle Park & Gardens! 🌿';
         
-        const phone = '256757576806';
+        const phone = '+256757576806';
         const url = `https://wa.me/${phone}?text=${message}`;
         
         // Clear cart after placing order
