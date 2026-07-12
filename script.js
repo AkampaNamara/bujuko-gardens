@@ -8,9 +8,8 @@
     const msgEl = document.getElementById('dynamic-greeting');
     if (msgEl) {
         const messages = [
-            '📍 Bujuuko Miracle Park · follow the signpost',
-            '🚗 Mityana road · 1.5 km from main road',
-            '👉 turn right at the signpost · 200m to paradise',
+            '📍 Bujuuko Miracle Park',
+            '🚗 1.5km from Bujuuko town off Mityana road',
             '🌳 Relax, Celebrate and Create Memories',
             '📞 Book now: +256757576806 / +256782230255',
         ];
@@ -448,7 +447,7 @@
         message += `%0A*Total: UGX ${getTotal().toLocaleString()}*%0A%0A`;
         message += 'Thank you for ordering from Bujuuko Miracle Park & Gardens! 🌿';
         
-        const phone = '+256782230255';
+        const phone = '+256757576806';
         const url = `https://wa.me/${phone}?text=${message}`;
         
         // Clear cart after placing order
@@ -565,7 +564,7 @@
 
     console.log('🌿 Bujuuko Miracle Park & Gardens · Complete Website');
     console.log('📄 Pages: Home | Menu | About | Contact | Cart');
-    console.log('📍 Mityana road, 1.5km · signpost on right, 200m from main road.');
+    console.log('📍 1.5km from Bujuuko town off Mityana road');
     console.log('📞 Bookings: +256757576806 / +256782230255');
     console.log('✨ Relax, Celebrate and Create Memories');
 })();
