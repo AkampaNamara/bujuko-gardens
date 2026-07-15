@@ -615,7 +615,7 @@ body {
 }
 
 /* ============================================================
-   VERTICAL NAVIGATION (BOTTOM)
+   VERTICAL NAVIGATION (BOTTOM - STACKED VERTICALLY)
    ============================================================ */
 
 .nav-wrapper-bottom {
@@ -628,23 +628,24 @@ body {
 
 .vertical-nav-bottom {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.8rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
     background: var(--warm-white);
     padding: 1rem 1.5rem;
-    border-radius: 60px;
+    border-radius: 20px;
     border: 2px solid var(--coffee-cream);
     box-shadow: 0 4px 15px rgba(61, 43, 31, 0.06);
     width: 100%;
-    max-width: 700px;
+    max-width: 350px;
 }
 
 .vertical-nav-bottom .nav-item-bottom {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
-    padding: 0.5rem 1.2rem;
+    padding: 0.6rem 1.5rem;
     border-radius: 60px;
     text-decoration: none;
     color: var(--coffee-dark);
@@ -653,6 +654,8 @@ body {
     transition: 0.3s ease;
     border: 2px solid transparent;
     background: var(--off-white);
+    width: 100%;
+    max-width: 250px;
 }
 
 .vertical-nav-bottom .nav-item-bottom:hover {
@@ -1721,15 +1724,15 @@ body {
 @media (max-width: 768px) {
     .vertical-nav-bottom {
         padding: 0.8rem 1rem;
-        gap: 0.5rem;
-        max-width: 100%;
-        border-radius: 40px;
+        gap: 0.4rem;
+        max-width: 280px;
+        border-radius: 16px;
     }
 
     .vertical-nav-bottom .nav-item-bottom {
         font-size: 0.85rem;
-        padding: 0.4rem 0.8rem;
-        gap: 0.4rem;
+        padding: 0.5rem 1rem;
+        max-width: 200px;
     }
 
     .vertical-nav-bottom .nav-item-bottom i {
@@ -1864,14 +1867,14 @@ body {
     .vertical-nav-bottom {
         padding: 0.6rem 0.8rem;
         gap: 0.4rem;
-        border-radius: 40px;
-        max-width: 100%;
+        max-width: 240px;
+        border-radius: 14px;
     }
 
     .vertical-nav-bottom .nav-item-bottom {
         font-size: 0.8rem;
         padding: 0.4rem 0.8rem;
-        gap: 0.3rem;
+        max-width: 180px;
     }
 
     .vertical-nav-bottom .nav-item-bottom i {
@@ -1983,20 +1986,22 @@ body {
     }
 
     .vertical-nav-bottom {
-        padding: 0.4rem 0.5rem;
+        padding: 0.5rem 0.6rem;
         gap: 0.3rem;
-        border-radius: 30px;
+        max-width: 200px;
+        border-radius: 12px;
     }
 
     .vertical-nav-bottom .nav-item-bottom {
         font-size: 0.7rem;
-        padding: 0.3rem 0.5rem;
-        gap: 0.2rem;
-        border-radius: 40px;
+        padding: 0.35rem 0.6rem;
+        max-width: 160px;
+        gap: 0.3rem;
+        border-radius: 30px;
     }
 
     .vertical-nav-bottom .nav-item-bottom i {
-        font-size: 0.75rem;
+        font-size: 0.8rem;
         width: 16px;
     }
 
