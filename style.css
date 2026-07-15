@@ -189,87 +189,6 @@ body {
     display: block;
 }
 
-/* ---------- NAVIGATION WRAPPER - CENTERED VERTICAL NAV ---------- */
-.nav-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1.5rem 0;
-}
-
-/* ---------- VERTICAL NAVIGATION ---------- */
-.vertical-nav {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    background: var(--warm-white);
-    padding: 1.5rem 2rem;
-    border-radius: 20px;
-    border: 2px solid var(--coffee-cream);
-    box-shadow: 0 8px 25px rgba(61, 43, 31, 0.08);
-    min-width: 280px;
-    width: 100%;
-    max-width: 400px;
-}
-
-.vertical-nav .nav-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem 1.5rem;
-    border-radius: 60px;
-    text-decoration: none;
-    color: var(--coffee-dark);
-    font-size: 1.1rem;
-    font-weight: 500;
-    transition: 0.3s ease;
-    border: 2px solid transparent;
-    background: var(--off-white);
-}
-
-.vertical-nav .nav-item:hover {
-    background: var(--coffee-cream);
-    border-color: var(--coffee-gold);
-    transform: translateX(5px);
-}
-
-.vertical-nav .nav-item.active {
-    background: var(--coffee-dark);
-    color: var(--off-white);
-    border-color: var(--coffee-dark);
-    box-shadow: 0 4px 15px rgba(61, 43, 31, 0.2);
-}
-
-.vertical-nav .nav-item i {
-    font-size: 1.4rem;
-    width: 30px;
-    text-align: center;
-    color: var(--coffee-gold);
-}
-
-.vertical-nav .nav-item.active i {
-    color: var(--off-white);
-}
-
-.vertical-nav .nav-item .cart-count {
-    background: var(--coffee-gold);
-    color: var(--coffee-dark);
-    font-size: 0.8rem;
-    font-weight: 700;
-    padding: 0.1rem 0.6rem;
-    border-radius: 50%;
-    min-width: 24px;
-    text-align: center;
-    line-height: 1.5;
-    display: inline-block;
-    margin-left: 0.3rem;
-}
-
-.vertical-nav .nav-item.active .cart-count {
-    background: var(--off-white);
-    color: var(--coffee-dark);
-}
-
 /* ---------- FLOATING WHATSAPP ICON ---------- */
 .floating-whatsapp {
     position: fixed;
@@ -693,6 +612,89 @@ body {
 
 .footer .fa-heart {
     color: #8B5A2B;
+}
+
+/* ============================================================
+   VERTICAL NAVIGATION (BOTTOM)
+   ============================================================ */
+
+.nav-wrapper-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.vertical-nav-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    background: var(--warm-white);
+    padding: 1rem 1.5rem;
+    border-radius: 60px;
+    border: 2px solid var(--coffee-cream);
+    box-shadow: 0 4px 15px rgba(61, 43, 31, 0.06);
+    width: 100%;
+    max-width: 700px;
+}
+
+.vertical-nav-bottom .nav-item-bottom {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 60px;
+    text-decoration: none;
+    color: var(--coffee-dark);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border: 2px solid transparent;
+    background: var(--off-white);
+}
+
+.vertical-nav-bottom .nav-item-bottom:hover {
+    background: var(--coffee-cream);
+    border-color: var(--coffee-gold);
+}
+
+.vertical-nav-bottom .nav-item-bottom.active {
+    background: var(--coffee-dark);
+    color: var(--off-white);
+    border-color: var(--coffee-dark);
+    box-shadow: 0 4px 15px rgba(61, 43, 31, 0.2);
+}
+
+.vertical-nav-bottom .nav-item-bottom i {
+    font-size: 1.1rem;
+    width: 22px;
+    text-align: center;
+    color: var(--coffee-gold);
+}
+
+.vertical-nav-bottom .nav-item-bottom.active i {
+    color: var(--off-white);
+}
+
+.vertical-nav-bottom .nav-item-bottom .cart-count {
+    background: var(--coffee-gold);
+    color: var(--coffee-dark);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.1rem 0.5rem;
+    border-radius: 50%;
+    min-width: 20px;
+    text-align: center;
+    line-height: 1.4;
+    display: inline-block;
+    margin-left: 0.2rem;
+}
+
+.vertical-nav-bottom .nav-item-bottom.active .cart-count {
+    background: var(--off-white);
+    color: var(--coffee-dark);
 }
 
 /* ============================================================
@@ -1717,20 +1719,22 @@ body {
 }
 
 @media (max-width: 768px) {
-    .vertical-nav {
-        min-width: 220px;
-        padding: 1.2rem 1.5rem;
-        max-width: 90%;
+    .vertical-nav-bottom {
+        padding: 0.8rem 1rem;
+        gap: 0.5rem;
+        max-width: 100%;
+        border-radius: 40px;
     }
 
-    .vertical-nav .nav-item {
+    .vertical-nav-bottom .nav-item-bottom {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
+        gap: 0.4rem;
+    }
+
+    .vertical-nav-bottom .nav-item-bottom i {
         font-size: 1rem;
-        padding: 0.8rem 1.2rem;
-    }
-
-    .vertical-nav .nav-item i {
-        font-size: 1.2rem;
-        width: 26px;
+        width: 20px;
     }
 
     .menu-grid {
@@ -1857,6 +1861,24 @@ body {
         height: 34px;
     }
 
+    .vertical-nav-bottom {
+        padding: 0.6rem 0.8rem;
+        gap: 0.4rem;
+        border-radius: 40px;
+        max-width: 100%;
+    }
+
+    .vertical-nav-bottom .nav-item-bottom {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+        gap: 0.3rem;
+    }
+
+    .vertical-nav-bottom .nav-item-bottom i {
+        font-size: 0.9rem;
+        width: 18px;
+    }
+
     .hero-text h2 {
         font-size: 2rem;
     }
@@ -1928,50 +1950,12 @@ body {
         font-size: 0.85rem;
     }
 
-    .vertical-nav {
-        min-width: 200px;
-        padding: 1rem 1.2rem;
-        max-width: 95%;
-    }
-
-    .vertical-nav .nav-item {
-        font-size: 0.95rem;
-        padding: 0.7rem 1rem;
-    }
-
-    .vertical-nav .nav-item i {
-        font-size: 1.1rem;
-        width: 24px;
-    }
-
     .floating-whatsapp {
         width: 45px;
         height: 45px;
         font-size: 1.6rem;
         bottom: 15px;
         right: 15px;
-    }
-
-    .coming-soon-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .why-grid {
-        grid-template-columns: 1fr;
-        padding: 1rem;
-    }
-
-    .experience-section {
-        padding: 1.5rem 1rem;
-        border-radius: 24px;
-    }
-
-    .experience-content h2 {
-        font-size: 1.3rem;
-    }
-
-    .experience-content p {
-        font-size: 0.95rem;
     }
 }
 
@@ -1996,6 +1980,30 @@ body {
 
     .logo-img {
         height: 28px;
+    }
+
+    .vertical-nav-bottom {
+        padding: 0.4rem 0.5rem;
+        gap: 0.3rem;
+        border-radius: 30px;
+    }
+
+    .vertical-nav-bottom .nav-item-bottom {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.5rem;
+        gap: 0.2rem;
+        border-radius: 40px;
+    }
+
+    .vertical-nav-bottom .nav-item-bottom i {
+        font-size: 0.75rem;
+        width: 16px;
+    }
+
+    .vertical-nav-bottom .nav-item-bottom .cart-count {
+        font-size: 0.6rem;
+        min-width: 16px;
+        padding: 0.05rem 0.3rem;
     }
 
     .hero-text h2 {
@@ -2169,25 +2177,6 @@ body {
     .cart-item-img {
         width: 50px;
         height: 50px;
-    }
-
-    .vertical-nav {
-        min-width: 180px;
-        padding: 0.8rem 1rem;
-        border-radius: 16px;
-        max-width: 100%;
-    }
-
-    .vertical-nav .nav-item {
-        font-size: 0.85rem;
-        padding: 0.6rem 0.8rem;
-        gap: 0.6rem;
-        border-radius: 40px;
-    }
-
-    .vertical-nav .nav-item i {
-        font-size: 1rem;
-        width: 22px;
     }
 
     .floating-whatsapp {
