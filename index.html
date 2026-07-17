@@ -10,6 +10,13 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="logo-192.png" />
+    <meta name="theme-color" content="#3D2B1F" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 </head>
 <body>
     <div class="container">
@@ -211,6 +218,21 @@
     <div id="cartToast" class="cart-toast">
         <i class="fas fa-check-circle"></i>
         <span id="toastMessage">Added to cart!</span>
+    </div>
+
+    <!-- ===== PWA INSTALL BANNER - Add to Home Screen ===== -->
+    <div id="installBanner" class="install-banner" style="display:none;">
+        <div class="install-banner-content">
+            <div class="install-banner-left">
+                <img src="logo.jpeg" alt="Miracle Park" class="install-banner-icon" />
+                <div>
+                    <h3>Miracle Park Gardens & Hotel</h3>
+                    <p>Install for a better experience</p>
+                </div>
+            </div>
+            <button id="installBtn" class="install-banner-btn">Add</button>
+        </div>
+        <button id="closeInstallBanner" class="install-banner-close">&times;</button>
     </div>
 
     <!-- External JavaScript -->
