@@ -534,22 +534,20 @@
             return;
         }
         
-        // Build the order message
-        let message = '🍽️ *New Order from Miracle Park Gardens & Hotel Bujuuko!*%0A%0A';
-        message += '*Order Details:*%0A';
-        message += '──────────────────%0A';
+        // Build a clean order message
+        let message = '*Miracle Park Order*%0A';
+        message += '────────────────%0A';
         
         cart.forEach((item, index) => {
             message += `${index + 1}. ${item.name} x${item.quantity} = UGX ${(item.price * item.quantity).toLocaleString()}%0A`;
         });
         
-        message += '──────────────────%0A';
+        message += '────────────────%0A';
         message += `*Total: UGX ${getTotal().toLocaleString()}*%0A%0A`;
-        message += '📞 *Customer Details:*%0A';
-        message += 'Name: _______________%0A';
-        message += 'Phone: _______________%0A';
-        message += 'Delivery Location: _______________%0A%0A';
-        message += 'Thank you for ordering from Miracle Park Gardens & Hotel Bujuuko! 🌿';
+        message += 'Customer Details:%0A';
+        message += 'Name: %0A';
+        message += 'Phone: %0A';
+        message += 'Location: %0A';
         
         const phone = '+256757576806';
         const url = `https://wa.me/${phone}?text=${message}`;
@@ -577,27 +575,23 @@
             return;
         }
         
-        // Build the email subject and body
-        let subject = 'New Order from Miracle Park Gardens & Hotel Bujuuko';
-        
-        let body = '🍽️ New Order from Miracle Park Gardens & Hotel Bujuuko!\n\n';
-        body += 'Order Details:\n';
-        body += '──────────────────\n';
+        // Build email body
+        let body = 'Miracle Park Order\n';
+        body += '────────────────\n';
         
         cart.forEach((item, index) => {
             body += `${index + 1}. ${item.name} x${item.quantity} = UGX ${(item.price * item.quantity).toLocaleString()}\n`;
         });
         
-        body += '──────────────────\n';
+        body += '────────────────\n';
         body += `Total: UGX ${getTotal().toLocaleString()}\n\n`;
-        body += '📞 Customer Details:\n';
-        body += 'Name: _______________\n';
-        body += 'Phone: _______________\n';
-        body += 'Delivery Location: _______________\n\n';
-        body += 'Thank you for ordering from Miracle Park Gardens & Hotel Bujuuko! 🌿';
+        body += 'Customer Details:\n';
+        body += 'Name: \n';
+        body += 'Phone: \n';
+        body += 'Location: \n';
         
         const email = 'miracleparkhotel@gmail.com';
-        const url = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        const url = `mailto:${email}?subject=New Order from Miracle Park&body=${encodeURIComponent(body)}`;
         
         // Open email
         window.open(url, '_blank');
